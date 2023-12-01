@@ -204,6 +204,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3005236798305589656, guid: 77c6880d31986c84fa0b1ba854e9443e, type: 3}
     - target: {fileID: 8589334861916456979, guid: 744dbe635fd007543a310dcf7198287c, type: 3}
+      propertyPath: _weaponPrefab
+      value: 
+      objectReference: {fileID: 3005236798305589656, guid: 77c6880d31986c84fa0b1ba854e9443e, type: 3}
+    - target: {fileID: 8589334861916456979, guid: 744dbe635fd007543a310dcf7198287c, type: 3}
       propertyPath: tesGameObject
       value: 
       objectReference: {fileID: 3005236798305589656, guid: 77c6880d31986c84fa0b1ba854e9443e, type: 3}

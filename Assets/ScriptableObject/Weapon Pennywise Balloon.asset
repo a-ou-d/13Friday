@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3537cdee4318b8548ac51b8cc71fc830, type: 3}
-  m_Name: NewWeaponData
+  m_Name: Weapon Pennywise Balloon
   m_EditorClassIdentifier: 
-  seaponName: 
+  weaponName: Balloon
   damage: 0
   attackSpeed: 0
   moveSpeed: 0
