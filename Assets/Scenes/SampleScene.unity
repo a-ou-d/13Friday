@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &184476183 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5219726668003102447, guid: 744dbe635fd007543a310dcf7198287c, type: 3}
+  m_PrefabInstance: {fileID: 5575805839827347262}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,9 +272,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3644679096018019032, guid: 744dbe635fd007543a310dcf7198287c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4160776509377401573, guid: 744dbe635fd007543a310dcf7198287c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7395bf0bc3cc40e4ab2dda5ec6832261, type: 3}
+    - target: {fileID: 4388976958116424571, guid: 744dbe635fd007543a310dcf7198287c, type: 3}
+      propertyPath: _weaponSpawnPoint
+      value: 
+      objectReference: {fileID: 184476183}
     - target: {fileID: 5884477864964894824, guid: 744dbe635fd007543a310dcf7198287c, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8007084145839586747, guid: 744dbe635fd007543a310dcf7198287c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
