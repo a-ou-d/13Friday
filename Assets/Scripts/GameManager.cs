@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
+    public Text timeText;
+    public Text scoreText;
     private int life;
+    float limit = 0f;
+    int totalScore;
 
     private void Awake()
     {
@@ -31,6 +35,18 @@ public class GameManager : MonoBehaviour
             //라이프가 0이하가 됬을시 게임오버씬 부르기
             GameOver();
         }
+    }
+
+    void Update()
+    {
+        limit += Time.deltaTime;
+        timeText.text = limit.ToString("N2");
+    }
+
+    public void addScore(int score)
+    {
+        totalScore += score;
+        scoreText.text = totalScore.ToString();
     }
 
     private void GameOver()
