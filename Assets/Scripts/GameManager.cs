@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
             //라이프가 0이하가 됬을시 게임오버씬 부르기
             GameOver();
         }
-    }
+    }    
 
     private void GameOver()
     {
