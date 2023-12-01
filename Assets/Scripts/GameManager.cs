@@ -28,14 +28,14 @@ public class GameManager : MonoBehaviour
 
         if (life <= 0)
         {
-            //�������� 0���ϰ� ������ ���ӿ����� �θ���
+            //라이프가 0이하가 됬을시 게임오버씬 부르기
             GameOver();
         }
     }
 
     private void GameOver()
     {
-        // ���� ���� ���� ó��
+        // 게임 오버 시의 처리
         Debug.Log("Game Over");
     }
 }
