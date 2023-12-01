@@ -8,7 +8,7 @@ public class Controller : MonoBehaviour
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnLookEvent;
     public event Action OnFireEvent;
-
+    public event Action OnSkillEvent;
     public void CallMoveEvent(Vector2 direction)
     {
         OnMoveEvent?.Invoke(direction);
@@ -22,5 +22,10 @@ public class Controller : MonoBehaviour
     public void CallFireEvent()
     {
         OnFireEvent?.Invoke();
+    }
+
+    public void CallSkillEvent()
+    {
+        OnSkillEvent?.Invoke();
     }
 }

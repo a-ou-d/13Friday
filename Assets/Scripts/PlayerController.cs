@@ -39,6 +39,7 @@ public class PlayerController : Controller
 
     public void OnFireEvent(InputValue value)
     {
-        Debug.Log("OnFire" + value.ToString());
+        
     }
+
 }
