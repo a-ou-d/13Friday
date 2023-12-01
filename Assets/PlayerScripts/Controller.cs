@@ -19,15 +19,19 @@ public class Controller : MonoBehaviour
 
     private void HandleAttackDelay()
     {
+
         if (_timeSinceLastAttack <= 0.2f)
         {
             _timeSinceLastAttack += Time.deltaTime;
         }
-        else if (_isAttacking)
+
+        else if (_isAttacking && _timeSinceLastAttack > 0.2f)
         {
             _timeSinceLastAttack = 0f;
             CallAttackEvent();
         }
+
+
     }
 
     public void CallMoveEvent(Vector2 direction)

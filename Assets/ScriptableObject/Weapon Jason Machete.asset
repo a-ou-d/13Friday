@@ -16,4 +16,4 @@ MonoBehaviour:
   damage: 0
   attackSpeed: 0
   moveSpeed: 1
-  icon: {fileID: 21300000, guid: f59542040dc5448459691fb41515f463, type: 3}
+  icon: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}

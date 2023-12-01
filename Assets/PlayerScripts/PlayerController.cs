@@ -42,5 +42,7 @@ public class PlayerController : Controller
     {
         Debug.Log("OnFire" + value.ToString());
         _isAttacking = value.isPressed;
+
     }
+
 }

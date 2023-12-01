@@ -44,7 +44,7 @@ public class Shooting : MonoBehaviour
     }
     private void OnShoot()
     {
-        CreateProjectile(WeaponType.Saw);
+        CreateProjectile(WeaponType.Machete);
         
     }
 
@@ -57,6 +57,7 @@ public class Shooting : MonoBehaviour
         newWeapon.name = newWeapon.weaponData.WeaponName;
         newWeapon.GetComponent<SpriteRenderer>().sprite = newWeapon.weaponData.Icon;
         newWeapon.GetComponent<Rigidbody2D>().velocity = _aimDirection * Vector2.one * newWeapon.weaponData.MoveSpeed;
+        Destroy(newWeapon.gameObject, 10f); // 시간이 시나면 사라지도록 만듬
         return newWeapon;
     }
 }
