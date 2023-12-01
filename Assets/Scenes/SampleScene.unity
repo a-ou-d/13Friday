@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &184476183 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5219726668003102447, guid: 744dbe635fd007543a310dcf7198287c, type: 3}
-  m_PrefabInstance: {fileID: 5575805839827347262}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +278,7 @@ PrefabInstance:
     - target: {fileID: 4388976958116424571, guid: 744dbe635fd007543a310dcf7198287c, type: 3}
       propertyPath: _weaponSpawnPoint
       value: 
-      objectReference: {fileID: 184476183}
+      objectReference: {fileID: 0}
     - target: {fileID: 5884477864964894824, guid: 744dbe635fd007543a310dcf7198287c, type: 3}
       propertyPath: m_Name
       value: Player
@@ -293,7 +288,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2427153806979120751, guid: 744dbe635fd007543a310dcf7198287c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 744dbe635fd007543a310dcf7198287c, type: 3}
