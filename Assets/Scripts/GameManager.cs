@@ -28,14 +28,14 @@ public class GameManager : MonoBehaviour
 
         if (life <= 0)
         {
-            //¶óÀÌÇÁ°¡ 0ÀÌÇÏ°¡ ‰çÀ»½Ã °ÔÀÓ¿À¹ö¾À ºÎ¸£±â
+            //ë¼ì´í”„ê°€ 0ì´í•˜ê°€ ë¬ì„ì‹œ ê²Œìž„ì˜¤ë²„ì”¬ ë¶€ë¥´ê¸°
             GameOver();
         }
     }
 
     private void GameOver()
     {
-        // °ÔÀÓ ¿À¹ö ½ÃÀÇ Ã³¸®
+        // ê²Œìž„ ì˜¤ë²„ ì‹œì˜ ì²˜ë¦¬
         Debug.Log("Game Over");
     }
 }
