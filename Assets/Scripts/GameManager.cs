@@ -40,13 +40,13 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         limit += Time.deltaTime;
-        timeText.text = limit.ToString("N2");
+        timeText.text = limit.ToString();
     }
 
     public void addScore(int score)
     {
         totalScore += score;
-        scoreText.text = totalScore.ToString();
+        scoreText.text = totalScore.ToString("N2");
     }
 
     private void GameOver()
