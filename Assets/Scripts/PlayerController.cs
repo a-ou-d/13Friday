@@ -22,6 +22,7 @@ public class PlayerController : Controller
 
     public void OnLook(InputValue value)
     {
+        
         Vector2 newAim = value.Get<Vector2>();
         Vector2 worldPos = _camera.ScreenToWorldPoint(newAim);
         newAim = (worldPos - (Vector2)transform.position).normalized;
@@ -31,14 +32,17 @@ public class PlayerController : Controller
             CallLookEvent(newAim);
         }
 
-        if (newAim.x != 0)
-        {
-            spriteRenderer.flipX = newAim.x < 0;
-        }
+        //if (newAim.x != 0)
+        //{
+        //    spriteRenderer.flipX = newAim.x < 0;
+        //}
     }
 
-    public void OnFireEvent(InputValue value)
+    public void OnFire(InputValue value)
     {
         Debug.Log("OnFire" + value.ToString());
+        _isAttacking = value.isPressed;
+
     }
+
 }
