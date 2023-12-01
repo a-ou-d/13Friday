@@ -7,8 +7,33 @@ public class Controller : MonoBehaviour
 {
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnLookEvent;
-    public event Action OnFireEvent;
-    public event Action OnSkillEvent;
+    public event Action OnAttackEvent;
+    
+    private float _timeSinceLastAttack;
+    protected bool _isAttacking { get; set; }
+
+    protected virtual void Update()
+    {
+        HandleAttackDelay();
+    }
+
+    private void HandleAttackDelay()
+    {
+
+        if (_timeSinceLastAttack <= 0.2f)
+        {
+            _timeSinceLastAttack += Time.deltaTime;
+        }
+
+        else if (_isAttacking && _timeSinceLastAttack > 0.2f)
+        {
+            _timeSinceLastAttack = 0f;
+            CallAttackEvent();
+        }
+
+
+    }
+
     public void CallMoveEvent(Vector2 direction)
     {
         OnMoveEvent?.Invoke(direction);
@@ -19,9 +44,9 @@ public class Controller : MonoBehaviour
         OnLookEvent?.Invoke(direction);
     }
 
-    public void CallFireEvent()
+    public void CallAttackEvent()
     {
-        OnFireEvent?.Invoke();
+        OnAttackEvent?.Invoke();
     }
 
     public void CallSkillEvent()
