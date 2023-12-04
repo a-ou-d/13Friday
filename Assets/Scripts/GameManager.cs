@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             
-            
             life = 3;
         }
         else

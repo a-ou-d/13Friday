@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
 public class PlayerController : Controller
 {
+   
+
     SpriteRenderer spriteRenderer;
     private Camera _camera;
+
+    private bool Sadako;
+    private bool Jason;
+    private bool Pennywise;
+    private bool Saw;
     private void Awake()
     {
         _camera = Camera.main;
@@ -45,4 +51,33 @@ public class PlayerController : Controller
 
     }
 
+    public void OnSkill()
+    {
+        Debug.Log("스킬사용");
+        if(Jason)
+        {
+            
+
+        }
+        else if (Sadako)
+        {
+
+            Vector2 worldPos = _camera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            transform.position = worldPos;
+        }
+        else if (Pennywise)
+        {
+            
+            Player playerScript = GetComponent<Player>();
+            if (playerScript != null)
+            {
+                playerScript.StartCoroutine(playerScript.DisableDamageForSeconds(5f));
+            }
+        }
+        else if (Saw)
+        {
+            
+
+        }
+    }
 }
