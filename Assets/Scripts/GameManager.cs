@@ -59,8 +59,7 @@ public class GameManager : MonoBehaviour
         TogglePause();
     }
     public void OnSettingButtonClicked()
-    {
-        // 버튼 클릭 시 일시정지 토글
+    {        
         ToggleSetting();
     }
 
@@ -113,7 +112,7 @@ public class GameManager : MonoBehaviour
 
     void ResumeGame()
     {
-        // 일시정지 메뉴 비활성화
+        // 일시정지, 셋팅 메뉴 비활성화
         PauseMenu.SetActive(false);
         SettingMenu.SetActive(false);
 
