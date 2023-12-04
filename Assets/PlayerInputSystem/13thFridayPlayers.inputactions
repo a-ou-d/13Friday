@@ -30,11 +30,11 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "skill",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "2af73d50-0ba5-4055-8476-b2b6dcad8f87",
                     "expectedControlType": "Button",
                     "processors": "",
