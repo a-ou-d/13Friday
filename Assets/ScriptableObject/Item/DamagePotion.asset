@@ -18,5 +18,5 @@ MonoBehaviour:
   recover: 0
   damages: 0
   speed: 0
-  dropProbability: 0
+  dropProbability: 10
   itemPrefab: {fileID: 2876993957885134241, guid: b1b3be055bdd19d4a8fe13fd6fecb757, type: 3}
