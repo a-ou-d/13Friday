@@ -52,6 +52,9 @@ public class EnemyStatus
             case EnemyType.Drill:
                 enemyStatus = new EnemyStatus(enemyType, "Drill", 100, 7f);
                 break;
+            case EnemyType.Survior:
+                enemyStatus = new EnemyStatus(enemyType, "Survior", 50, 5f);
+                break;
 
         }
         return enemyStatus;
