@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1587726353953629348}
   - component: {fileID: 5771926408648613085}
-  - component: {fileID: -2845271601084400148}
   - component: {fileID: -1912080086256601987}
+  - component: {fileID: 1038825477729384711}
   m_Layer: 0
   m_Name: Survivor
   m_TagString: Enemy
@@ -86,20 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-2845271601084400148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1195484275389007257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d155ccf7cbef2794ba372aa694458fe7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Player
-  distanceThreshold: 5
 --- !u!114 &-1912080086256601987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,3 +102,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b010c4d26d0837544bb75c3770d3e796, type: 2}
   - {fileID: 11400000, guid: 08300c26073a8684f8fef88615d896cd, type: 2}
   - {fileID: 11400000, guid: dab305103b2a1764a9c232dcbeaa5df2, type: 2}
+--- !u!114 &1038825477729384711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195484275389007257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d155ccf7cbef2794ba372aa694458fe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  distanceThreshold: 3
