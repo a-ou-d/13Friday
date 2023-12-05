@@ -12,13 +12,8 @@ public enum EnemyType
     CircusRing = 5,
     MerryGoRound = 6,
     Drill = 7,
-<<<<<<< HEAD
-    Survior = 8,
-=======
 }
-
 public enum EnemyBossType
 {
     Boss1 = 0,
->>>>>>> merge-branch
 }
