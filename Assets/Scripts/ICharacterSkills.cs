@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public interface ICharacterSkills
 {
-    void UseSkill();    
+    void UseSkill();
 }
 
 public class Jason : MonoBehaviour, ICharacterSkills
