@@ -5,14 +5,18 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
+    public GameObject jasonPrefab;
+    public GameObject sadakoPrefab;
+    public GameObject pennywisePrefab;
+    public GameObject sawPrefab;
     private int life;
+    private GameObject currentPlayer;
 
     private void Awake()
     {
         if (Instance == null)
         {
-            
+
             life = 3;
         }
         else
