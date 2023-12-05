@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7901755907796988323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3933038539156529260}
+  - component: {fileID: 7159247932254416622}
+  m_Layer: 0
+  m_Name: EnemySpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3933038539156529260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7901755907796988323}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7159247932254416622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7901755907796988323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb4888c0f5695245a1f3617f8ee53bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 2139366583879014674, guid: 930cca6972d18694fa867abf539cc244, type: 3}
+  - {fileID: 2920109798228459026, guid: d94ec1496e17abf41b0815eea12a859f, type: 3}
+  - {fileID: 1278962964249439742, guid: ca5ce95d12fa6d24d863e2ee05f03ae5, type: 3}
+  - {fileID: 7323992688677183823, guid: f1fa14002a1d36745ba01edc6349b9a4, type: 3}
+  - {fileID: 6445855877322171708, guid: b4edb300df792bb478922066aa9f10e0, type: 3}
+  - {fileID: 43842599538870038, guid: 144dc8a369499f442bdaa88deee1d95d, type: 3}
+  - {fileID: 1318657474560095981, guid: 319187690899c3146868f6375f3078b8, type: 3}
+  - {fileID: 3236102604974020413, guid: 5b8d90349f9b67644889e37d91dd3b94, type: 3}
+  spawnInterval: 1
