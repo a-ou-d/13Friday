@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     private Vector3 dir;
 
     [SerializeField] private float speed;
+    [SerializeField] private int hp;
 
     public EnemyType enemyType;
 
@@ -20,6 +21,7 @@ public class Enemy : MonoBehaviour
         enemyStatus = enemyStatus.SetStatus(enemyType);
         targetPlayer = GameObject.FindWithTag("Player");
         speed = enemyStatus._speed;
+        hp = enemyStatus._hp;
     }
 
     private void Update()
@@ -28,5 +30,10 @@ public class Enemy : MonoBehaviour
         dir = (targetPosition - transform.position).normalized;
 
         transform.position += dir * speed * Time.deltaTime;
+
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -13,3 +13,8 @@ public enum EnemyType
     MerryGoRound = 6,
     Drill = 7,
 }
+
+public enum EnemyBossType
+{
+    Boss1 = 0,
+}
