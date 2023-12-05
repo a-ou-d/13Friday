@@ -3,7 +3,11 @@ guid: c80a9a611e47e624385f0f6670288b0a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - JasonPrefab: {fileID: 7066868185935737654, guid: 84c6ef4d5ed5f054f8473b7c9152c549, type: 3}
+  - SadakoPrefab: {fileID: 4226328214236220641, guid: 3a5f7ac176372174bb7f25a7fe991e9d, type: 3}
+  - PennywisePrefab: {fileID: 4737346903522480839, guid: 5a80c156354e7da47a93bd88a97a983a, type: 3}
+  - SawPrefab: {fileID: 260229830776645145, guid: 6380332a0ebad4747b1dc99679c6a0fd, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
