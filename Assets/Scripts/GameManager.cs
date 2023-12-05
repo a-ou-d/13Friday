@@ -5,14 +5,16 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
     public GameObject JasonPrefab;
     public GameObject SadakoPrefab;
     public GameObject PennywisePrefab;
     public GameObject SawPrefab;
     private int Life;
 
+    private void Start()
+    {
 
+    }
     private void Awake()
     {
         GameObject sadako = Instantiate(SadakoPrefab, Vector3.zero, Quaternion.identity);
