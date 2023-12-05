@@ -4,26 +4,44 @@ using UnityEngine;
 
 public class DookiSpawn : MonoBehaviour
 {
-    public GameObject EnemyPrefab; // 몬스터의 프리팹을 저장할 변수
-    public float spawnRadius = 5f; // 몬스터가 생성될 반경
+    public GameObject EnemyPrefab;
+    public float minSpawnRadius = 5.0f;
+    public float maxSpawnRadius = 10.0f;
+    public int numberOfSurvivor = 1;
+    public string playerTag = "Player";
 
-    public void SpawnEnemyNearPlayer()
+    private GameObject player;
+
+    private void Start()
     {
-        // 플레이어의 위치를 가져옵니다.
-        Vector3 playerPosition = transform.position;
+        // 플레이어를 태그로 찾아서 player 변수에 할당
+        player = GameObject.FindGameObjectWithTag(playerTag);
 
-        // 플레이어 주변에 몬스터를 생성하기 위해 랜덤한 위치를 계산합니다.
-        Vector3 spawnPosition = playerPosition + Random.insideUnitSphere * spawnRadius;
-
-        // 몬스터를 생성합니다.
-        GameObject newMonster = Instantiate(EnemyPrefab, spawnPosition, Quaternion.identity);
-
-        // 생성된 몬스터의 부모를 설정하거나 추가적인 초기화 등을 수행할 수 있습니다.
-        // 예를 들어:
-        // newMonster.transform.parent = transform; // 부모 설정
-
-        // 생성된 몬스터에 대한 추가적인 설정을 할 수 있습니다.
-        // newMonster.GetComponent<MonsterController>().player = playerTransform; // 플레이어 Transform 연결
+        if (player != null)
+        {
+            SpawnMonstersAroundPlayer();
+        }
+        else
+        {
+            Debug.LogError("플레이어를 찾을 수 없습니다!");
+        }
     }
 
+    void SpawnMonstersAroundPlayer()
+    {
+        Vector3 playerPosition = player.transform.position;
+
+        for (int i = 0; i < numberOfSurvivor; i++)
+        {
+            float randomSpawnRadius = Random.Range(minSpawnRadius, maxSpawnRadius);
+            Vector2 randomSpawnOffset = Random.insideUnitCircle * randomSpawnRadius;
+            Vector3 randomSpawnPosition = playerPosition + new Vector3(randomSpawnOffset.x, randomSpawnOffset.y, 0);
+            Instantiate(EnemyPrefab, randomSpawnPosition, Quaternion.identity);
+        }
+    }
 }
+
+
+
+
+

@@ -6,21 +6,21 @@ public class Item : MonoBehaviour
 {
     public ItemData itemdata;
 
-    private string name;
-    private int recover;
-    private float damages;
-    private float speed;
-    private float dropProbability;
-    private Sprite icon;
+    private string Name;
+    private int Recover;
+    private float Damages;
+    private float Speed;
+    private float DropProbability;
+    private Sprite Icon;
     public float lifespan = 30f;
 
     public void SetItemData()
     {
-        name = itemdata.name;
-        recover = itemdata.recover;
-        damages = itemdata.damages;
-        speed = itemdata.speed;
-        dropProbability = itemdata.dropProbability;
+        Name = itemdata.name;
+        Recover = itemdata.recover;
+        Damages = itemdata.damages;
+        Speed = itemdata.speed;
+        DropProbability = itemdata.dropProbability;
 
     }
     private void Start()
@@ -32,11 +32,14 @@ public class Item : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            DestroyItem();
+            Debug.Log("아이템 획득");
+            Destroy(gameObject);
+
+            // 여기에 아이템을 획득하는 등의 추가 동작을 구현하세요
         }
     }
 }
