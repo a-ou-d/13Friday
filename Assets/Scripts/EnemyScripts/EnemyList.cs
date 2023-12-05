@@ -12,5 +12,4 @@ public enum EnemyType
     CircusRing = 5,
     MerryGoRound = 6,
     Drill = 7,
-    Survior = 8,
 }

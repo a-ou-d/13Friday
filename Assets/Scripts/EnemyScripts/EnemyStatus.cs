@@ -52,6 +52,7 @@ public class EnemyStatus
             case EnemyType.Drill:
                 enemyStatus = new EnemyStatus(enemyType, "Drill", 100, 7f);
                 break;
+
         }
         return enemyStatus;
     }
