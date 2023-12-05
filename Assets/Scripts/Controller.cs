@@ -5,11 +5,13 @@ using System;
 
 public class Controller : MonoBehaviour
 {
+
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnLookEvent;
     public event Action OnAttackEvent;
     public event Action OnSkillEvent;
-    
+
+
     private float _timeSinceLastAttack;
     protected bool _isAttacking { get; set; }
 
@@ -50,7 +52,7 @@ public class Controller : MonoBehaviour
         OnAttackEvent?.Invoke();
     }
 
-    public void CallSkillEvent()
+    public void OnSkill()
     {
         OnSkillEvent?.Invoke();
     }
