@@ -45,9 +45,9 @@ GameObject:
   - component: {fileID: 5467424184587165778}
   - component: {fileID: 3208918775817592223}
   - component: {fileID: 5505285622807064249}
-  - component: {fileID: 1537055023545703027}
+  - component: {fileID: 7663109017470384876}
+  - component: {fileID: 6099396929679358471}
   - component: {fileID: 7567545187268486136}
-  - component: {fileID: 7922520828045182968}
   - component: {fileID: 4122603351376510834}
   - component: {fileID: 4784212861836543003}
   - component: {fileID: 4202003994269118392}
@@ -72,7 +72,7 @@ Transform:
   m_Children:
   - {fileID: 9122779974048386467}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &5467424184587165778
 BoxCollider2D:
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 2da052d686114a44ab6df95b7e93d1f5, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: d61e62f4c7d69fd40b2b9844435b981c, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1537055023545703027
+--- !u!114 &7663109017470384876
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,7 +185,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 4226328214236220641}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61c72ec888f7d164abcf1ff133dfd606, type: 3}
+  m_Script: {fileID: 11500000, guid: 378528273901de84a9b148f612bdd583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6099396929679358471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4226328214236220641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4864ac0e1abe78d41a1c2416239f97e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &7567545187268486136
@@ -198,18 +210,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20bd3d3a0b7c5584893b60523924c74d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7922520828045182968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4226328214236220641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0ecdae53d78bf2418ddfae190d2561e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &4122603351376510834
@@ -245,7 +245,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1a7620e2b57bc354fb639c7bdbd51e29, type: 2}
   - {fileID: 11400000, guid: 2211634855555e349b45473f68be79ad, type: 2}
   _weaponPrefab: {fileID: 3005236798305589656, guid: 77c6880d31986c84fa0b1ba854e9443e, type: 3}
-  _weaponSpawnPoint: {fileID: 0}
+  _weaponSpawnPoint: {fileID: 5562840215670905801}
 --- !u!114 &4202003994269118392
 MonoBehaviour:
   m_ObjectHideFlags: 0
