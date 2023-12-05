@@ -52,7 +52,7 @@ public class Controller : MonoBehaviour
         OnAttackEvent?.Invoke();
     }
 
-    public void OnSkill()
+    public void CallOnSkill()
     {
         OnSkillEvent?.Invoke();
     }

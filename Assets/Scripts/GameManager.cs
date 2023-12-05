@@ -5,8 +5,12 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;        
-    private int life;
+    public static GameManager Instance;
+    public GameObject JasonPrefab;
+    public GameObject SadakoPrefab;
+    public GameObject PennywisePrefab;
+    public GameObject SawPrefab;
+    private int Life;
 
     public GameObject PauseMenu;
     public GameObject SettingMenu;
@@ -21,10 +25,14 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        GameObject sadako = Instantiate(SadakoPrefab, Vector3.zero, Quaternion.identity);
+        PlayerController sadakoController = sadako.GetComponent<PlayerController>();
+        ICharacterSkills sadakoSkills = sadako.GetComponent<ICharacterSkills>();
+        sadakoController.SetCharacterSkills(sadakoSkills);
         if (Instance == null)
         {
-            
-            life = 3;
+
+            Life = 3;
         }
         else
         {
@@ -34,9 +42,9 @@ public class GameManager : MonoBehaviour
 
     public void DecreaseLife(int amount)
     {
-        life -= amount;
+        Life -= amount;
 
-        if (life <= 0)
+        if (Life <= 0)
         {
             //라이프가 0이하가 됬을시 게임오버씬 부르기
             GameOver();
@@ -46,7 +54,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         limit += Time.deltaTime;
-        timeText.text = limit.ToString("N2");
+        //timeText.text = limit.ToString("N2");
         if (Input.GetButtonDown("Cancel"))
         {
             TogglePause();
