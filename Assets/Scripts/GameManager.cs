@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     int totalScore;
 
+
     private void Awake()
     {
         if (Instance == null)
@@ -138,4 +139,5 @@ public class GameManager : MonoBehaviour
         // 게임 오버 시의 처리
         Debug.Log("Game Over");
     }
+
 }
