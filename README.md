@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## 13Friday - Monster
 
 11/30
@@ -16,3 +17,6 @@ Enemy 추적 방식 : Player 태그가 붙은 대상을 추적합니다.
 보스 추가
 
 적 스폰 추가
+=======
+## 13Friday
+>>>>>>> JJIN-MAK
