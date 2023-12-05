@@ -5,22 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-<<<<<<< HEAD
+
     public GameObject JasonPrefab;
     public GameObject SadakoPrefab;
     public GameObject PennywisePrefab;
     public GameObject SawPrefab;
     private int Life;
 
-    private void Start()
-    {
 
-    }
-=======
-
-    private int life;
-
->>>>>>> parent of 3c60192 (Merge branch 'merge-branch' into 조성우1)
     private void Awake()
     {
         GameObject sadako = Instantiate(SadakoPrefab, Vector3.zero, Quaternion.identity);
