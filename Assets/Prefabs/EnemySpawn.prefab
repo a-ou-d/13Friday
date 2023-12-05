@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 428974780183532285, guid: 930cca6972d18694fa867abf539cc244, type: 3}
+  - {fileID: 2139366583879014674, guid: 930cca6972d18694fa867abf539cc244, type: 3}
   - {fileID: 2920109798228459026, guid: d94ec1496e17abf41b0815eea12a859f, type: 3}
   - {fileID: 1278962964249439742, guid: ca5ce95d12fa6d24d863e2ee05f03ae5, type: 3}
   - {fileID: 7323992688677183823, guid: f1fa14002a1d36745ba01edc6349b9a4, type: 3}
