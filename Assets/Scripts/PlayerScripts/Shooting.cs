@@ -2,62 +2,111 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public enum WeaponType
 {
     Machete,
-    Saw,
+    TV,
     Balloon,
-    CRTTV,
-
+    Saw,
 }
 
 public class Shooting : MonoBehaviour
 {
-    [SerializeField] private List<WeaponData> _weaponsDatas; // 무기의 데이터
-    [SerializeField] private GameObject _weaponPrefab; // 무기의 프리팹
-
-    private Controller _controller;
-
     [SerializeField] private Transform _weaponSpawnPoint; // 던질 무기가 생성 될 위치 입니다.
-
     private Vector2 _aimDirection = Vector2.zero; // 어떤 방향으로 던지는 벡터값 입니다.
+    private Controller _controller;
+    private WeaponLoader _weaponLoader;
 
+    private SpriteRenderer _weaponSprite;
+
+    private GameObject weaponPrefab;
+
+    private float playerSpeed;
+
+    public void SetPlayerSpeed(float speed)
+    {
+        playerSpeed = speed;
+    }
 
     private void Awake()
     {
         _controller = GetComponent<Controller>();
+        _weaponLoader = GetComponent<WeaponLoader>();
     }
     void Start()
     {
+        //_weaponSprite = transform.Find("WeaponSprite").GetComponent<SpriteRenderer>();
+
         _controller.OnAttackEvent += OnShoot;
         _controller.OnLookEvent += OnAim;
     }
-    void Update()
-    {
-
-    }
-
     private void OnAim(Vector2 newAimDirection)
     {
         _aimDirection = newAimDirection;
     }
     private void OnShoot()
     {
-        CreateProjectile(WeaponType.Machete);
-        
+        CreateProjectile();
     }
-
-    private Weapon CreateProjectile(WeaponType type)
+    private void SetWeaponSprite()
     {
 
-        Debug.Log("발사");
-        var newWeapon = Instantiate(_weaponPrefab, _weaponSpawnPoint.position, Quaternion.identity).GetComponent<Weapon>();
-        newWeapon.weaponData = _weaponsDatas[(int)type];
-        newWeapon.name = newWeapon.weaponData.WeaponName;
-        newWeapon.GetComponent<SpriteRenderer>().sprite = newWeapon.weaponData.Icon;
-        newWeapon.GetComponent<Rigidbody2D>().velocity = _aimDirection * Vector2.one * newWeapon.weaponData.MoveSpeed;
-        Destroy(newWeapon.gameObject, 10f); // 시간이 시나면 사라지도록 만듬
-        return newWeapon;
     }
+    private void CreateProjectile()
+    {
+        weaponPrefab = SetingWeaponPrefab();
+
+        if (weaponPrefab != null)
+        {
+            GameObject weaponSpriteObject = new GameObject("WeaponSprite");
+
+            weaponSpriteObject.transform.SetParent(weaponPrefab.transform.Find("WeaponPivot"),false);
+
+            SpriteRenderer weaponSpriteRenderer = weaponSpriteObject.AddComponent<SpriteRenderer>();
+
+            WeaponData weaponData = weaponPrefab.GetComponent<WeaponData>();
+
+            weaponSpriteRenderer.sprite = weaponData.weaponSprite;
+        }
+    }
+
+
+    public GameObject SetingWeaponPrefab()
+    {
+        WeaponDatas weaponData = _weaponLoader.weaponLoader;
+
+
+        // 각 무기 데이터로부터 로드한 프리팹을 이용하여 무기 생성
+
+        GameObject weaponPrefab = _weaponLoader.LoadWeaponPrefab(weaponData.Datas[1].weaponPrefabAddress); //프리팹의 주소를 받아옴
+
+
+
+        // 무기 데이터를 이용하여 무기 설정
+        GameObject weaponInstance = Instantiate(weaponPrefab, _weaponSpawnPoint.position, Quaternion.identity); // 그 주소로 생성
+        Rigidbody2D _weaponRigidbody = weaponInstance.GetComponent<Rigidbody2D>();
+
+        WeaponData _weaponData = weaponInstance.GetComponent<WeaponData>(); // 무기의 GameObject 데이터 설정을 위한 MonoBehaviour를 가지고있는 WeaponData로 가져옴
+        _weaponData.type = weaponData.Datas[1].type;
+        _weaponData.name = weaponData.Datas[1].name;
+        _weaponData.damage = weaponData.Datas[1].damage;
+        _weaponData.attackSpeed = weaponData.Datas[1].attackSpeed;
+        _weaponData.speed = weaponData.Datas[1].speed;
+
+        SpriteRenderer weaponSpriteRenderer = weaponInstance.GetComponent<SpriteRenderer>();
+
+        Sprite weaponSprite = _weaponLoader.LoadSprite(weaponData.Datas[1].weaponSpriteAddress);
+        weaponSpriteRenderer.sprite = weaponSprite;
+
+        float weaponSpeed = _weaponData.speed + playerSpeed;
+        // 무기 발사
+        _weaponRigidbody.AddForce(_aimDirection * weaponSpeed, ForceMode2D.Impulse);
+
+        Destroy(weaponInstance, 10f);
+
+        return weaponPrefab;
+    }
+
 }

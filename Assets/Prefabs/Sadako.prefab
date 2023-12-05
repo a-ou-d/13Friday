@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 4122603351376510834}
   - component: {fileID: 4784212861836543003}
   - component: {fileID: 4202003994269118392}
+  - component: {fileID: 3305134894672805044}
   m_Layer: 0
   m_Name: Sadako
   m_TagString: Player
@@ -72,7 +73,7 @@ Transform:
   m_Children:
   - {fileID: 9122779974048386467}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &5467424184587165778
 BoxCollider2D:
@@ -145,7 +146,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &5505285622807064249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,12 +240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e2c3fa3c92a87c478363e0e182ab2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponsDatas:
-  - {fileID: 11400000, guid: bbc370dfa78960041b8e260b303861fc, type: 2}
-  - {fileID: 11400000, guid: e0644aedd55d9eb46816a0b49b400743, type: 2}
-  - {fileID: 11400000, guid: 1a7620e2b57bc354fb639c7bdbd51e29, type: 2}
-  - {fileID: 11400000, guid: 2211634855555e349b45473f68be79ad, type: 2}
-  _weaponPrefab: {fileID: 3005236798305589656, guid: 77c6880d31986c84fa0b1ba854e9443e, type: 3}
   _weaponSpawnPoint: {fileID: 5562840215670905801}
 --- !u!114 &4202003994269118392
 MonoBehaviour:
@@ -290,6 +285,18 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &3305134894672805044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4226328214236220641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc26b243dbb7fd47b495ac0af387cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6421085194541985540
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +407,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8346977198890968361}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.05, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -448,7 +455,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -456,7 +463,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8707431046308514197
@@ -483,7 +490,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8707431046308514197}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.05, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
