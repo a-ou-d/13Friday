@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyStatus
@@ -53,6 +54,42 @@ public class EnemyStatus
                 enemyStatus = new EnemyStatus(enemyType, "Drill", 100, 7f);
                 break;
         }
+
         return enemyStatus;
+    }
+}
+
+public class EnemyBossStatus
+{
+    public EnemyBossType _enemyBossType { get; }
+    public string _name { get; set; }
+    public int _hp { get; set; }
+    public float _speed { get; set; }
+
+    public EnemyBossStatus()
+    {
+
+    }
+
+    public EnemyBossStatus(EnemyBossType enemyBossType, string name, int hp, float speed)
+    {
+        _enemyBossType = enemyBossType;
+        _name = name;
+        _hp = hp;
+        _speed = speed;
+    }
+
+    public EnemyBossStatus SetStatus(EnemyBossType enemyBossType)
+    {
+        EnemyBossStatus enemyBossStatus = null;
+
+        switch (enemyBossType)
+        {
+            case EnemyBossType.Boss1:
+                enemyBossStatus = new EnemyBossStatus(enemyBossType, "Boss1", 1000, 6f);
+                break;
+        }
+
+        return enemyBossStatus;
     }
 }
