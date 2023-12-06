@@ -27,6 +27,8 @@ public class StageManager : MonoBehaviour // 스테이지 관리
         UnlockCharacterForNextStage();
         MoveToNextStage();
         ShowClearScene();
+
+        StageLock.UnlockStage(currentStage + 1);
     }
 
     private void UnlockCharacterForNextStage()
@@ -63,5 +65,21 @@ public class StageManager : MonoBehaviour // 스테이지 관리
     private void ShowClearScene()
     {
         SceneManager.LoadScene("StageClear");
+    }
+
+    public void ChangeStage(int stageNumber)
+    {
+        if (stageNumber >= 0 && stageNumber < stages.Length)
+        {
+            currentStage = stageNumber;
+            for (int i = 0; i < stages.Length; i++)
+            {
+                stages[i].SetActive(i == stageNumber);
+            }
+        }
+        else
+        {
+            Debug.LogError("Invalid stage number: " + stageNumber);
+        }
     }
 }

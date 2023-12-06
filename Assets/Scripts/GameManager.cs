@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     int totalScore;
 
-
     private void Awake()
     {
         GameManager.Instance = this;    
@@ -163,12 +162,6 @@ public class GameManager : MonoBehaviour
         }
 
         isGamePaused = !isGamePaused;
-    }
-
-    public void addScore(int score)
-    {
-        totalScore += score;
-        scoreText.text = totalScore.ToString();
     }
 
     private void GameOver()
