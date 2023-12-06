@@ -5797,16 +5797,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80a9a611e47e624385f0f6670288b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JasonPrefab: {fileID: 0}
-  SadakoPrefab: {fileID: 0}
-  PennywisePrefab: {fileID: 0}
-  JigsawPrefab: {fileID: 0}
+  JasonPrefab: {fileID: 5987108871860618664, guid: 84c6ef4d5ed5f054f8473b7c9152c549, type: 3}
+  SadakoPrefab: {fileID: 4226328214236220641, guid: 3a5f7ac176372174bb7f25a7fe991e9d, type: 3}
+  PennywisePrefab: {fileID: 458201390686525031, guid: 5a80c156354e7da47a93bd88a97a983a, type: 3}
+  JigsawPrefab: {fileID: 8815618381284936745, guid: 6380332a0ebad4747b1dc99679c6a0fd, type: 3}
   Life: 3
-  EnemySpawn: {fileID: 0}
+  EnemySpawn: {fileID: 7901755907796988323, guid: 7dc0b7c96bbda6f41b86df968ff615fc, type: 3}
   PauseMenu: {fileID: 645707528}
   SettingMenu: {fileID: 2018849327}
-  timeText: {fileID: 0}
-  scoreText: {fileID: 0}
+  timeText: {fileID: 1692688655}
+  kill: {fileID: 1204114421}
 --- !u!1 &1297366831
 GameObject:
   m_ObjectHideFlags: 0
@@ -7872,7 +7872,7 @@ GameObject:
   - component: {fileID: 1706694143}
   - component: {fileID: 1706694142}
   m_Layer: 5
-  m_Name: TIme/Score
+  m_Name: TIme/Kill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

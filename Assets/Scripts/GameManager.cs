@@ -110,39 +110,34 @@ public class GameManager : MonoBehaviour
         isPaused = !isPaused;
 
         // 일시정지 시 일시정지 메뉴 활성화
-        PauseMenu.SetActive(true);
+        PauseMenu.SetActive(isPaused);
 
-        if (isGamePaused)
-        {
-            // 게임 재개
-            Time.timeScale = 1f;
-        }
-        else
+        if (isPaused)
         {
             // 게임 일시정지
             Time.timeScale = 0f;
         }
-
-        // isGamePaused의 값을 토글(toggle)하는 코드
-        isGamePaused = !isGamePaused;
+        else
+        {
+            // 게임 재개
+            Time.timeScale = 1f;
+        }
     }
 
     void ToggleSetting()
     {        
         isPaused = !isPaused;
         
-        SettingMenu.SetActive(true);
+        SettingMenu.SetActive(isPaused);
 
-        if (isGamePaused)
-        {            
-            Time.timeScale = 1f;
-        }
-        else
+        if (isPaused)
         {            
             Time.timeScale = 0f;
         }
-                
-        isGamePaused = !isGamePaused;
+        else
+        {            
+            Time.timeScale = 1f;
+        }
     }
 
     void ResumeGame()
