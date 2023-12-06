@@ -1,0 +1,44 @@
+{
+    "Datas":
+    [   
+   {
+        "type" : 0,
+        "name": "Machete",
+        "damage": 5,
+        "attackSpeed": 5,
+        "speed": 3,
+        "weaponPrefabAddress": "Weapon/Machete",    
+        "weaponSpriteAddress": "weaponSprite/dot_machete"
+
+    },
+
+    {
+        "type" : 0,
+        "name": "CRTTV",
+        "damage": 5,
+        "attackSpeed": 5,
+        "speed": 5,
+        "weaponPrefabAddress": "Weapon/CRTTV",     
+        "weaponSpriteAddress": "weaponSprite/dot_tv"     
+    },
+    {
+        "type" : 0,
+        "name": "Balloon",
+        "damage": 5,
+        "attackSpeed": 5,
+        "speed": 3,
+        "weaponPrefabAddress": "Weapon/Balloon",
+        "weaponSpriteAddress": "weaponSprite/dot_balloon"          
+    },
+    {
+        "type" : 0,
+        "name": "HandSaw",
+        "damage": 5,
+        "attackSpeed": 5,
+        "speed": 3,
+        "weaponPrefabAddress": "Weapon/HandSaw",
+        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+    }
+]
+
+}
