@@ -773,7 +773,6 @@ GameObject:
   - component: {fileID: 744393791}
   - component: {fileID: 744393790}
   - component: {fileID: 744393789}
-  - component: {fileID: 744393792}
   m_Layer: 5
   m_Name: Char2 - Sadako
   m_TagString: Untagged
@@ -844,31 +843,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 744393790}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 744393792}
-        m_TargetAssemblyTypeName: CharacterChoice, Assembly-CSharp
-        m_MethodName: OnCharacterChoose
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Sadako
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1278895392}
-        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-        m_MethodName: OnButtonClick1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &744393790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,18 +882,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744393787}
   m_CullTransparentMesh: 1
---- !u!114 &744393792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 744393787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24340b08b0ad7be43a4b81c8fbf48b2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &771447209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +1052,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: 69}
+  m_AnchoredPosition: {x: -4, y: 50}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &845075416
@@ -1130,6 +1093,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845075414}
   m_CullTransparentMesh: 1
+--- !u!1 &906874840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 906874842}
+  - component: {fileID: 906874841}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &906874841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906874840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80a9a611e47e624385f0f6670288b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JasonPrefab: {fileID: 5987108871860618664, guid: 84c6ef4d5ed5f054f8473b7c9152c549, type: 3}
+  SadakoPrefab: {fileID: 4226328214236220641, guid: 3a5f7ac176372174bb7f25a7fe991e9d, type: 3}
+  PennywisePrefab: {fileID: 458201390686525031, guid: 5a80c156354e7da47a93bd88a97a983a, type: 3}
+  SawPrefab: {fileID: 8815618381284936745, guid: 6380332a0ebad4747b1dc99679c6a0fd, type: 3}
+  Life: 3
+  EnemySpawn: {fileID: 7901755907796988323, guid: 7dc0b7c96bbda6f41b86df968ff615fc, type: 3}
+  PauseMenu: {fileID: 0}
+  SettingMenu: {fileID: 0}
+  timeText: {fileID: 0}
+  scoreText: {fileID: 0}
+--- !u!4 &906874842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906874840}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 372.64093, y: 195.606, z: -2.1249466}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1159720141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,7 +1182,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -60}
+  m_AnchoredPosition: {x: 0, y: -68}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1159720143
@@ -1277,7 +1294,6 @@ GameObject:
   - component: {fileID: 1178668058}
   - component: {fileID: 1178668057}
   - component: {fileID: 1178668056}
-  - component: {fileID: 1178668055}
   m_Layer: 5
   m_Name: Jason_weapon
   m_TagString: Untagged
@@ -1305,18 +1321,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1178668055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178668053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24340b08b0ad7be43a4b81c8fbf48b2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1178668056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1578,6 +1582,7 @@ GameObject:
   - component: {fileID: 1278895389}
   - component: {fileID: 1278895388}
   - component: {fileID: 1278895392}
+  - component: {fileID: 1278895393}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1687,6 +1692,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   getButtonValue: 0
+--- !u!114 &1278895393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278895387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 391c4f1739f67cc44b76824aec4d4c79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sadakoLock: {fileID: 306370838}
+  sadakoButton: {fileID: 744393789}
+  pennywiseLock: {fileID: 1261019352}
+  pennywiseButton: {fileID: 1327938290}
+  jigsawLock: {fileID: 705992077}
+  jigsawButton: {fileID: 1705427924}
 --- !u!1 &1327938288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,7 +1722,6 @@ GameObject:
   - component: {fileID: 1327938292}
   - component: {fileID: 1327938291}
   - component: {fileID: 1327938290}
-  - component: {fileID: 1327938293}
   m_Layer: 5
   m_Name: Char3 - Pennywise
   m_TagString: Untagged
@@ -1770,31 +1792,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1327938291}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1327938293}
-        m_TargetAssemblyTypeName: CharacterChoice, Assembly-CSharp
-        m_MethodName: OnCharacterChoose
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Pennywise
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1278895392}
-        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-        m_MethodName: OnButtonClick2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1327938291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1833,18 +1831,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327938288}
   m_CullTransparentMesh: 1
---- !u!114 &1327938293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1327938288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24340b08b0ad7be43a4b81c8fbf48b2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1372387090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,7 +1843,6 @@ GameObject:
   - component: {fileID: 1372387095}
   - component: {fileID: 1372387094}
   - component: {fileID: 1372387093}
-  - component: {fileID: 1372387092}
   m_Layer: 5
   m_Name: Jigsaw_weapon
   m_TagString: Untagged
@@ -1885,18 +1870,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1372387092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1372387090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24340b08b0ad7be43a4b81c8fbf48b2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1372387093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2164,7 +2137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -360, y: -260}
+  m_AnchoredPosition: {x: -318, y: -252}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1457907424
@@ -2294,7 +2267,6 @@ GameObject:
   - component: {fileID: 1638943431}
   - component: {fileID: 1638943430}
   - component: {fileID: 1638943429}
-  - component: {fileID: 1638943428}
   m_Layer: 5
   m_Name: Sadako_weapon
   m_TagString: Untagged
@@ -2322,18 +2294,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1638943428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638943426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24340b08b0ad7be43a4b81c8fbf48b2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1638943429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2440,7 +2400,6 @@ GameObject:
   - component: {fileID: 1705427926}
   - component: {fileID: 1705427925}
   - component: {fileID: 1705427924}
-  - component: {fileID: 1705427927}
   m_Layer: 5
   m_Name: Char4 - Jigsaw
   m_TagString: Untagged
@@ -2511,31 +2470,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1705427925}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1705427927}
-        m_TargetAssemblyTypeName: CharacterChoice, Assembly-CSharp
-        m_MethodName: OnCharacterChoose
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Jigsaw
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1278895392}
-        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-        m_MethodName: OnButtonClick3
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1705427925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2574,18 +2509,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705427922}
   m_CullTransparentMesh: 1
---- !u!114 &1705427927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705427922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24340b08b0ad7be43a4b81c8fbf48b2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1745495637
 GameObject:
   m_ObjectHideFlags: 0
@@ -2598,7 +2521,6 @@ GameObject:
   - component: {fileID: 1745495642}
   - component: {fileID: 1745495641}
   - component: {fileID: 1745495640}
-  - component: {fileID: 1745495639}
   m_Layer: 5
   m_Name: Pennywise_weapon
   m_TagString: Untagged
@@ -2626,18 +2548,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1745495639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1745495637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24340b08b0ad7be43a4b81c8fbf48b2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1745495640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2817,8 +2727,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3099,7 +3009,6 @@ GameObject:
   - component: {fileID: 2093310285}
   - component: {fileID: 2093310284}
   - component: {fileID: 2093310283}
-  - component: {fileID: 2093310286}
   m_Layer: 5
   m_Name: Char1 - Jason
   m_TagString: Untagged
@@ -3170,31 +3079,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2093310284}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2093310286}
-        m_TargetAssemblyTypeName: CharacterChoice, Assembly-CSharp
-        m_MethodName: OnCharacterChoose
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Jason
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1278895392}
-        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-        m_MethodName: OnButtonClick0
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2093310284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3233,18 +3118,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093310281}
   m_CullTransparentMesh: 1
---- !u!114 &2093310286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093310281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24340b08b0ad7be43a4b81c8fbf48b2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2134943014
 GameObject:
   m_ObjectHideFlags: 0
@@ -3281,7 +3154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 203, y: 100}
+  m_AnchoredPosition: {x: 253, y: 150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2134943016

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterLock : MonoBehaviour
+public class CharacterLock : MonoBehaviour // 캐릭터 잠금 상태 관리
 {
-    private const string UnlockKey = "CharacterUnlocked_";
+    public const string UnlockKey = "CharacterUnlocked_";
 
     public static bool IsCharacterUnlocked(string characterName)
     {

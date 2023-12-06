@@ -4,20 +4,49 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
+    [SerializeField]private GameObject player;
+    public GameObject Bullet;
+    public int damage = 1;
+    public float speed = 10;
+    public float attackDelay = 0.2f;
+    private float timeSinceLastAttack;
 
-
-    public int damage;
-    public float speed;
-    public float attackDelay;
 
     void Start()
     {
-        
+        player = GameObject.FindWithTag("Player");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+
+        HandleAttackDelay();
     }
+
+    private void HandleAttackDelay()
+    {
+
+        if (timeSinceLastAttack <= attackDelay)
+        {
+            timeSinceLastAttack += Time.deltaTime;
+        }
+        else if (timeSinceLastAttack > attackDelay)
+        {
+            timeSinceLastAttack = 0f;
+            ShootBullet();
+            
+        }
+    }
+
+    public void ShootBullet()
+    {
+
+        GameObject bulletObject = Instantiate(Bullet, transform.position, Quaternion.identity);
+        Rigidbody2D rb = bulletObject.GetComponent<Rigidbody2D>();
+
+        Vector2 dri = (player.transform.position - transform.position).normalized;
+        rb.AddForce(dri * speed, ForceMode2D.Impulse);
+
+    }
+
 }

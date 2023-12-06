@@ -499,7 +499,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
---- !u!1001 &6482912417834390883
+--- !u!1001 &998115046
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -507,56 +507,56 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 691728342460120226, guid: 347e3ce266f1e2040adaf37ae4f10986, type: 3}
-      propertyPath: m_Name
-      value: EnemyFire
-      objectReference: {fileID: 0}
-    - target: {fileID: 7692236097042821738, guid: 347e3ce266f1e2040adaf37ae4f10986, type: 3}
+    - target: {fileID: 3018928430588102008, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 7692236097042821738, guid: 347e3ce266f1e2040adaf37ae4f10986, type: 3}
+    - target: {fileID: 3018928430588102008, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7692236097042821738, guid: 347e3ce266f1e2040adaf37ae4f10986, type: 3}
+    - target: {fileID: 3018928430588102008, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7692236097042821738, guid: 347e3ce266f1e2040adaf37ae4f10986, type: 3}
+    - target: {fileID: 3018928430588102008, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7692236097042821738, guid: 347e3ce266f1e2040adaf37ae4f10986, type: 3}
+    - target: {fileID: 3018928430588102008, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7692236097042821738, guid: 347e3ce266f1e2040adaf37ae4f10986, type: 3}
+    - target: {fileID: 3018928430588102008, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7692236097042821738, guid: 347e3ce266f1e2040adaf37ae4f10986, type: 3}
+    - target: {fileID: 3018928430588102008, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7692236097042821738, guid: 347e3ce266f1e2040adaf37ae4f10986, type: 3}
+    - target: {fileID: 3018928430588102008, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7692236097042821738, guid: 347e3ce266f1e2040adaf37ae4f10986, type: 3}
+    - target: {fileID: 3018928430588102008, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7692236097042821738, guid: 347e3ce266f1e2040adaf37ae4f10986, type: 3}
+    - target: {fileID: 3018928430588102008, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7692236097042821738, guid: 347e3ce266f1e2040adaf37ae4f10986, type: 3}
+    - target: {fileID: 3018928430588102008, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881556462795915756, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
+      propertyPath: m_Name
+      value: Boss1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 347e3ce266f1e2040adaf37ae4f10986, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
