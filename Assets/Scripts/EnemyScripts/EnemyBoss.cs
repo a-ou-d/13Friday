@@ -24,6 +24,7 @@ public class EnemyBoss : MonoBehaviour
         targetPlayer = GameObject.FindWithTag("Player");
         speed = enemyBossStatus._speed;
         hp = enemyBossStatus._hp;
+        keepDistance = enemyBossStatus._keepDistance;
     }
 
     private void Update()

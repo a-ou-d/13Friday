@@ -5,37 +5,66 @@ using UnityEngine;
 public class EnemySpawn : MonoBehaviour
 {
     public GameObject[] enemies;
+    public GameObject[] named;
+    public GameObject[] boss;
     public float spawnInterval = 2f;
+    public float namedSpawnInterval = 30f;
+    public float bossSpawnInterval = 600f;
 
-    private GameObject enemy;
+    private GameObject player;
     private Vector2 spawnPos;
     private float randomX;
     private float randomY;
 
     private void Start()
     {
-        InvokeRepeating("SpawnObject", 0f, spawnInterval);
+        player = GameObject.FindWithTag("Player");
+        InvokeRepeating("SpawnEnemy", spawnInterval, spawnInterval);
+        InvokeRepeating("SpawnNamed", namedSpawnInterval, namedSpawnInterval);
+        Invoke("SpawnBoss", bossSpawnInterval);
     }
 
-    private void Update()
+    public void SpawnEnemy()
     {
         Vector2 right = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height * 0.5f));
         Vector2 left = -right;
         Vector2 top = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width * 0.5f, Screen.height));
         Vector2 bottom = -left;
 
-        randomX = Random.Range(right.x, left.x);
-        randomY = Random.Range(top.y, bottom.y);
-        spawnPos = new Vector2(randomX, randomY);
-    }
-
-    public GameObject SpawnObject()
-    {
         if (enemies != null)
         {
+            while (true)
+            {
+                randomX = Random.Range(right.x, left.x);
+                randomY = Random.Range(top.y, bottom.y);
+
+                if ((player.transform.position - new Vector3(randomX, randomY, 0f)).magnitude > 4f)
+                {
+                    spawnPos = new Vector2(randomX, randomY);
+                    break;
+                }
+            }
+
             int random = Random.Range(0, enemies.Length);
-            return Instantiate(enemies[random], spawnPos, Quaternion.identity);
+            Instantiate(enemies[random], spawnPos, Quaternion.identity);
         }
-        return null;
+    }
+
+    public void SpawnNamed()
+    {
+        if (named != null)
+        {
+            int random = Random.Range(0, named.Length);
+            Instantiate(named[random], spawnPos, Quaternion.identity);
+        }
+    }
+
+    public void SpawnBoss()
+    {
+        if (boss != null)
+        {
+            int random = Random.Range(0, boss.Length);
+            Instantiate(boss[random], spawnPos, Quaternion.identity);
+        }
     }
 }
