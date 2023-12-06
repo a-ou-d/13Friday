@@ -2947,7 +2947,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 473742825}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2000824529}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnButtonRandom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &473742825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3758,7 +3770,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 648331334}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2000824529}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnButtonRandom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &648331334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9109,7 +9133,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1740247550}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2000824529}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnButtonRandom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1740247550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10412,8 +10448,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2000824526}
-  - component: {fileID: 2000824527}
   - component: {fileID: 2000824528}
+  - component: {fileID: 2000824527}
+  - component: {fileID: 2000824529}
   m_Layer: 0
   m_Name: ItemChoiceMenu
   m_TagString: Untagged
@@ -10469,7 +10506,10 @@ MonoBehaviour:
   - {fileID: 240197528}
   - {fileID: 943457341}
   - {fileID: 1191451513}
-  weaponButtons: []
+  weaponButtons:
+  - {fileID: 1740247549}
+  - {fileID: 473742824}
+  - {fileID: 648331333}
 --- !u!114 &2000824528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10482,6 +10522,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc26b243dbb7fd47b495ac0af387cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2000824529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000824525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8444cc0d3ea78458c2f6681f655da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getButtonValue: 0
 --- !u!1 &2012360211
 GameObject:
   m_ObjectHideFlags: 0

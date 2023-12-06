@@ -64,8 +64,8 @@
         "damage": 5,
         "attackSpeed": 10,
         "speed": 10,
-        "weaponPrefabAddress": "NewWeapon/GhostlyHand",
-        "weaponSpriteAddress": "weaponSprite/GhostlyHand"          
+        "weaponPrefabAddress": "NewWeapon/GhostHand",
+        "weaponSpriteAddress": "weaponSprite/GhostHand"          
     },
 
 
@@ -113,8 +113,8 @@
         "damage": 5,
         "attackSpeed": 10,
         "speed": 10,
-        "weaponPrefabAddress": "NewWeapon/TrapsofDeath",
-        "weaponSpriteAddress": "weaponSprite/TrapsofDeath"          
+        "weaponPrefabAddress": "NewWeapon/TrapofDeath",
+        "weaponSpriteAddress": "weaponSprite/TrapofDeath"          
     },
     {
         "type" : 12,

@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class ButtonController : MonoBehaviour
 {
     WeaponLoader weaponLoader;
-
+    UIManager uiUIManager;
     private void Awake()
     {
         weaponLoader = GetComponent<WeaponLoader>();
+        uiUIManager = GetComponent<UIManager>();
     }
 
     public int getButtonValue;
-    private int randomInt; 
+
 
 
     public void OnButtonClick0()
@@ -34,14 +35,9 @@ public class ButtonController : MonoBehaviour
 
     public void OnButtonRandom()
     {
-
-        randomInt = Random.Range(5, 13);
+        int randomInt = uiUIManager.GetLastClickedIndex();
         getButtonValue = OnButtonClick(randomInt);
-        if (randomInt != getButtonValue)
-        {
-            getButtonValue = OnButtonClick(randomInt);
-        }
-        
+        SceneManager.LoadScene("SampleScene");
     }
 
     private int OnButtonClick(int value)
