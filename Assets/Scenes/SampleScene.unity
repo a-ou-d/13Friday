@@ -490,6 +490,10 @@ PrefabInstance:
       propertyPath: Life
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7622988509903434572, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: JigsawPrefab
+      value: 
+      objectReference: {fileID: 8815618381284936745, guid: 6380332a0ebad4747b1dc99679c6a0fd, type: 3}
     - target: {fileID: 8166951901996762307, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -513,11 +517,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3018928430588102008, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 6.27
       objectReference: {fileID: 0}
     - target: {fileID: 3018928430588102008, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.21
       objectReference: {fileID: 0}
     - target: {fileID: 3018928430588102008, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
       propertyPath: m_LocalPosition.z
