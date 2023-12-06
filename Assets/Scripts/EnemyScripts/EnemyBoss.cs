@@ -45,6 +45,7 @@ public class EnemyBoss : MonoBehaviour
     {
         if (hp <= 0)
         {
+            GameManager.ObjectDestroyed();
             Destroy(gameObject);
             return true;
         }
