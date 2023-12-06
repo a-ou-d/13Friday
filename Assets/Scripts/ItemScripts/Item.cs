@@ -6,6 +6,8 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public ItemData itemdata;
+    private GameManager gameManager;
+    private Shooting shooting;
 
     private string _name;
     private int _recover;
@@ -14,6 +16,10 @@ public class Item : MonoBehaviour
     private float _dropProbability;
     private Sprite _icon;
     public float lifespan = 30f;
+    private float SpeedDuration = 5f;
+    private float DamageDuration = 5f;
+    public bool isSpeed;
+    public bool isDamage;
 
     public void SetItemData()
     {
@@ -22,17 +28,19 @@ public class Item : MonoBehaviour
         _damages = itemdata.damages;
         _speed = itemdata.speed;
         _dropProbability = itemdata.dropProbability;
-
     }
     private void Start()
     {
+        SetItemData();
+
+        gameManager = GameManager.Instance;
+
         Invoke("DestroyItem", lifespan);
     }
     private void DestroyItem()
     {
         Destroy(gameObject);
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -65,11 +73,16 @@ public class Item : MonoBehaviour
 
     private void ApplyItemDamageEffects()
     {
-        Debug.Log("다마게 업");
+        Debug.Log("무기 데미지 강화!");
     }
 
     private void ApplyItemRecoverEffects()
     {
+        if (gameManager != null)
+        {
+            gameManager.Heal(_recover);
+        }
         Debug.Log("체력회복!");
     }
+
 }

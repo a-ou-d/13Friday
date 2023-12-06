@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject EnemySpawn;
     public GameObject PauseMenu;
     public GameObject SettingMenu;
+    public GameObject Item;
     public Text timeText;
     private bool isGamePaused = false;
     private bool isPaused = false;
@@ -167,4 +168,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Over");
     }
 
+    public void Heal(int amount)
+    {
+        Life += amount;
+        Debug.Log(Life);
+    }
 }

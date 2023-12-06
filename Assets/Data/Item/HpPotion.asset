@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 793419f4d418a1445b46d1a3d6f69f73, type: 3}
   m_Name: HpPotion
   m_EditorClassIdentifier: 
+  itemType: 0
   name: 
   desc: 
   icon: {fileID: 0}
-  recover: 0
+  recover: 1
   damages: 0
   speed: 0
   dropProbability: 10
