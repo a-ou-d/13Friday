@@ -47,7 +47,7 @@
         "attackSpeed": 10,
         "speed": 10,
         "weaponPrefabAddress": "NewWeapon/Chainsaw",
-        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+        "weaponSpriteAddress": "weaponSprite/Chainsaw"          
     },
     {
         "type" : 5,
@@ -56,7 +56,7 @@
         "attackSpeed": 10,
         "speed": 10,
         "weaponPrefabAddress": "NewWeapon/FoldedPaper",
-        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+        "weaponSpriteAddress": "weaponSprite/FoldedPaper"          
     },
     {
         "type" : 6,
@@ -65,7 +65,7 @@
         "attackSpeed": 10,
         "speed": 10,
         "weaponPrefabAddress": "NewWeapon/GhostlyHand",
-        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+        "weaponSpriteAddress": "weaponSprite/GhostlyHand"          
     },
 
 
@@ -76,7 +76,7 @@
         "attackSpeed": 10,
         "speed": 10,
         "weaponPrefabAddress": "NewWeapon/GoldenCoins",
-        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+        "weaponSpriteAddress": "weaponSprite/GoldenCoins"          
     },
     {
         "type" : 8,
@@ -85,7 +85,7 @@
         "attackSpeed": 10,
         "speed": 10,
         "weaponPrefabAddress": "NewWeapon/MaskoftheKiller",
-        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+        "weaponSpriteAddress": "weaponSprite/MaskoftheKiller"          
     },
     {
         "type" : 9,
@@ -94,7 +94,7 @@
         "attackSpeed": 10,
         "speed": 10,
         "weaponPrefabAddress": "NewWeapon/Soul",
-        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+        "weaponSpriteAddress": "weaponSprite/Soul"          
     },
 
 
@@ -105,7 +105,7 @@
         "attackSpeed": 10,
         "speed": 10,
         "weaponPrefabAddress": "NewWeapon/Stick",
-        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+        "weaponSpriteAddress": "weaponSprite/Stick"          
     },
     {
         "type" : 11,
@@ -114,7 +114,7 @@
         "attackSpeed": 10,
         "speed": 10,
         "weaponPrefabAddress": "NewWeapon/TrapsofDeath",
-        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+        "weaponSpriteAddress": "weaponSprite/TrapsofDeath"          
     },
     {
         "type" : 12,
@@ -123,7 +123,7 @@
         "attackSpeed": 10,
         "speed": 10,
         "weaponPrefabAddress": "NewWeapon/UniquePuzzle",
-        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+        "weaponSpriteAddress": "weaponSprite/UniquePuzzle"          
     }
     
 ]

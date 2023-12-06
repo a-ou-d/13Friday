@@ -79,6 +79,7 @@ MonoBehaviour:
   damage: 0
   attackSpeed: 0
   speed: 0
+  damageMultiplier: 1
   weaponSprite: {fileID: 0}
 --- !u!212 &919011929914166166
 SpriteRenderer:
@@ -121,7 +122,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 09537a7fa4a67f8469f378963653237b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 95711d72f21a1b243b9c827db5f7b592, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
