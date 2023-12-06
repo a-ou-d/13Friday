@@ -59,24 +59,61 @@ public class EnemyStatus
     }
 }
 
+public class EnemyNamedStatus
+{
+    public EnemyNamedType _enemyNamedType { get; }
+    public string _name { get; set; }
+    public int _hp { get; set; }
+    public float _speed { get; set; }
+
+    public EnemyNamedStatus()
+    {
+
+    }
+
+    public EnemyNamedStatus(EnemyNamedType enemyNamedType, string name, int hp, float speed)
+    {
+        _enemyNamedType = enemyNamedType;
+        _name = name;
+        _hp = hp;
+        _speed = speed;
+    }
+
+    public EnemyNamedStatus SetStatus(EnemyNamedType enemyNamedType)
+    {
+        EnemyNamedStatus enemyNamedStatus = null;
+
+        switch (enemyNamedType)
+        {
+            case EnemyNamedType.Named1:
+                enemyNamedStatus = new EnemyNamedStatus(enemyNamedType, "Named1", 300, 3f);
+                break;
+        }
+
+        return enemyNamedStatus;
+    }
+}
+
 public class EnemyBossStatus
 {
     public EnemyBossType _enemyBossType { get; }
     public string _name { get; set; }
     public int _hp { get; set; }
     public float _speed { get; set; }
+    public float _keepDistance { get; set; }
 
     public EnemyBossStatus()
     {
 
     }
 
-    public EnemyBossStatus(EnemyBossType enemyBossType, string name, int hp, float speed)
+    public EnemyBossStatus(EnemyBossType enemyBossType, string name, int hp, float speed, float keepDistance)
     {
         _enemyBossType = enemyBossType;
         _name = name;
         _hp = hp;
         _speed = speed;
+        _keepDistance = keepDistance;
     }
 
     public EnemyBossStatus SetStatus(EnemyBossType enemyBossType)
@@ -86,7 +123,7 @@ public class EnemyBossStatus
         switch (enemyBossType)
         {
             case EnemyBossType.Boss1:
-                enemyBossStatus = new EnemyBossStatus(enemyBossType, "Boss1", 1000, 6f);
+                enemyBossStatus = new EnemyBossStatus(enemyBossType, "Boss1", 1000, 6f, 5f);
                 break;
         }
 
