@@ -26,10 +26,29 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        GameObject sadako = Instantiate(SadakoPrefab, Vector3.zero, Quaternion.identity);
-        PlayerController sadakoController = sadako.GetComponent<PlayerController>();
-        ICharacterSkills sadakoSkills = sadako.GetComponent<Sadako>();
-        sadakoController.SetCharacterSkills(sadakoSkills);
+        //사다코 게임매니저에서 생성 및 스킬 입력
+        //GameObject sadako = Instantiate(SadakoPrefab, Vector3.zero, Quaternion.identity);
+        //PlayerController sadakoController = sadako.GetComponent<PlayerController>();
+        //ICharacterSkills sadakoSkills = sadako.GetComponent<Sadako>();
+        //sadakoController.SetCharacterSkills(sadakoSkills);
+        
+        //패니와이저 게임매니저에서 생성 및 스킬 입력
+        GameObject pennywise = Instantiate(PennywisePrefab, Vector3.zero, Quaternion.identity);
+        PlayerController pennywiseController = pennywise.GetComponent<PlayerController>();
+        ICharacterSkills pennywiseSkills = pennywise.GetComponent<Pennywise>();
+        pennywiseController.SetCharacterSkills(pennywiseSkills);
+
+        //제이슨 게임매니저에서 생성 및 스킬 입력
+        //GameObject jason = Instantiate(JasonPrefab, Vector3.zero, Quaternion.identity);
+        //PlayerController jasonController = jason.GetComponent<PlayerController>();
+        //ICharacterSkills jasonSkills = jason.GetComponent<Pennywise>();
+        //jasonController.SetCharacterSkills(jasonSkills);
+
+        //쏘우 게임매니저에서 생성 및 스킬 입력
+        //GameObject saw = Instantiate(SawPrefab, Vector3.zero, Quaternion.identity);
+        //PlayerController sawController = saw.GetComponent<PlayerController>();
+        //ICharacterSkills sawSkills = saw.GetComponent<Pennywise>();
+        //sawController.SetCharacterSkills(sawSkills);
 
         if (Instance == null)
         {

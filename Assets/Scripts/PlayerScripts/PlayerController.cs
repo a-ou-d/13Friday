@@ -53,7 +53,7 @@ public class PlayerController : Controller
         }
         else
         {
-            Debug.Log("Skill on cooldown. Wait for cooldown to finish.");
+            Debug.Log("스킬이 준비중입니다.");
         }
     }
 

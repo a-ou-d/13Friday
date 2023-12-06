@@ -15,7 +15,7 @@ public class Player : Controller
             
             PlayerTakeDamage();
             //5ÃÊµ¿¾È TakeDamage ÇÔ¼ö ¸ØÃã
-            StartCoroutine(DisableDamageForSeconds(5f));
+            StartCoroutine(DisableDamageForSeconds(2f));
         }
     }
 
