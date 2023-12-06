@@ -6,6 +6,7 @@ using UnityEngine;
 public class ItemData : ScriptableObject
 {
     [Header("Main Info")]
+    public ItemType itemType;
     public string name;
     public string desc;
     public Sprite icon;
@@ -18,4 +19,11 @@ public class ItemData : ScriptableObject
 
     [Header("Item")]
     public GameObject itemPrefab;
+
+    public enum ItemType
+    {
+        Recover,
+        Damage,
+        Speed,
+    }
 }
