@@ -1578,6 +1578,7 @@ GameObject:
   - component: {fileID: 1278895389}
   - component: {fileID: 1278895388}
   - component: {fileID: 1278895392}
+  - component: {fileID: 1278895393}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1687,6 +1688,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   getButtonValue: 0
+--- !u!114 &1278895393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278895387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 391c4f1739f67cc44b76824aec4d4c79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sadakoLock: {fileID: 306370838}
+  sadakoButton: {fileID: 744393789}
+  pennywiseLock: {fileID: 1261019352}
+  pennywiseButton: {fileID: 1327938290}
+  jigsawLock: {fileID: 705992077}
+  jigsawButton: {fileID: 1705427924}
 --- !u!1 &1327938288
 GameObject:
   m_ObjectHideFlags: 0
@@ -2817,8 +2836,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

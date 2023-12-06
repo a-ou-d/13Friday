@@ -3,79 +3,65 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.SceneManagement;
+using UnityEditor.Experimental.GraphView;
 
-public class StageManager : MonoBehaviour
+public class StageManager : MonoBehaviour // 스테이지 관리
 {
-    public GameObject Stage1;
-    public GameObject Stage2;
-    public GameObject Stage3;
-    public GameObject Stage4;
-    private int currentStage;
+    public EnemyBoss boss;
+    public GameObject[] stages;
+    private int currentStage = -1;
 
-    public void ChangeStage(int stageNumber)
+
+    private void Update()
     {
-        currentStage = stageNumber;
-
-        switch (stageNumber)
+        if (boss != null && boss.Isdie())
         {
-            case 1:
-                Stage1.SetActive(true);
-                Stage2.SetActive(false);
-                Stage3.SetActive(false);
-                Stage4.SetActive(false);
-                break;
-            case 2:
-                Stage1.SetActive(false);
-                Stage2.SetActive(true);
-                Stage3.SetActive(false);
-                Stage4.SetActive(false);
-                break;
-            case 3:
-                Stage1.SetActive(false);
-                Stage2.SetActive(false);
-                Stage3.SetActive(true);
-                Stage4.SetActive(false);
-                break;
-            case 4:
-                Stage1.SetActive(false);
-                Stage2.SetActive(false);
-                Stage3.SetActive(false);
-                Stage4.SetActive(true);
-                break;
-            default:
-                break;
+            ClearStage();
         }
     }
 
+    public void ClearStage()
+    {
+        currentStage++;
+        UnlockCharacterForNextStage();
+        MoveToNextStage();
+        ShowClearScene();
+    }
 
-    public void Restart()
+    private void UnlockCharacterForNextStage()
     {
         switch (currentStage)
         {
+            case 0:
+                CharacterLock.UnlockCharacter("Sadako");
+                break;
             case 1:
-                ResetStage(Stage1);
+                CharacterLock.UnlockCharacter("Pennywise");
                 break;
             case 2:
-                ResetStage(Stage2);
-                break;
-            case 3:
-                ResetStage(Stage3);
-                break;
-            case 4:
-                ResetStage(Stage4);
-                break;
-            default:
+                CharacterLock.UnlockCharacter("Jigsaw");
                 break;
         }
     }
 
-
-    public void ResetStage(GameObject stage)
+    private void MoveToNextStage()
     {
-        //플레이어 위치 초기화
-        //점수 초기화
-        //장애물 및 적 초기화
-        //등등 추가
-        //씬매니저로 해당 씬 로드하면 될 것 같습니다.
+        if (currentStage + 1 < stages.Length)
+        {
+            for (int i = 0; i < stages.Length; i++)
+            {
+                stages[i].SetActive(i == currentStage + 1);
+            }
+        }
+        else
+        {
+            SceneManager.LoadScene("EndingScene");
+        }
+    }
+
+    private void ShowClearScene()
+    {
+        SceneManager.LoadScene("StageClear");
     }
 }

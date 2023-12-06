@@ -2960,7 +2960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 448278412}
-  - component: {fileID: 448278411}
+  - component: {fileID: 448278413}
   m_Layer: 0
   m_Name: StageManager
   m_TagString: Untagged
@@ -2968,22 +2968,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &448278411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448278410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c00b9fda396445e46843477b65367e34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Stage1: {fileID: 1141228610}
-  Stage2: {fileID: 1357190401}
-  Stage3: {fileID: 1622152187}
-  Stage4: {fileID: 715838803}
 --- !u!4 &448278412
 Transform:
   m_ObjectHideFlags: 0
@@ -2999,6 +2983,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &448278413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448278410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c00b9fda396445e46843477b65367e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 6051486829039073956, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
+  stages:
+  - {fileID: 1141228610}
+  - {fileID: 1357190401}
+  - {fileID: 1622152187}
+  - {fileID: 715838803}
 --- !u!1 &465196061
 GameObject:
   m_ObjectHideFlags: 0
@@ -5749,10 +5751,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00b9fda396445e46843477b65367e34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Stage1: {fileID: 0}
-  Stage2: {fileID: 0}
-  Stage3: {fileID: 0}
-  Stage4: {fileID: 0}
+  boss: {fileID: 0}
+  stages: []
 --- !u!114 &833091402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6023,10 +6023,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00b9fda396445e46843477b65367e34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Stage1: {fileID: 1141228610}
-  Stage2: {fileID: 1357190401}
-  Stage3: {fileID: 1622152187}
-  Stage4: {fileID: 715838803}
+  boss: {fileID: 0}
+  stages: []
 --- !u!4 &858696431
 Transform:
   m_ObjectHideFlags: 0
@@ -7622,6 +7620,54 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1232860384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1232860386}
+  - component: {fileID: 1232860385}
+  m_Layer: 0
+  m_Name: MainGameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1232860385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232860384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9664c7d7be93340439480a33c82a713e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jasonPrefab: {fileID: 5987108871860618664, guid: 84c6ef4d5ed5f054f8473b7c9152c549, type: 3}
+  sadakoPrefab: {fileID: 4226328214236220641, guid: 3a5f7ac176372174bb7f25a7fe991e9d, type: 3}
+  pennywisePrefab: {fileID: 458201390686525031, guid: 5a80c156354e7da47a93bd88a97a983a, type: 3}
+  jigsawPrefab: {fileID: 8815618381284936745, guid: 6380332a0ebad4747b1dc99679c6a0fd, type: 3}
+--- !u!4 &1232860386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232860384}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 320.6441, y: 205.04245, z: -2.7994533}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1235393312
 GameObject:
   m_ObjectHideFlags: 0

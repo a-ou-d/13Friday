@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 3425023327486903503}
   - component: {fileID: -4420101560835300881}
   m_Layer: 0
-  m_Name: Saw
+  m_Name: Jigsaw
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
