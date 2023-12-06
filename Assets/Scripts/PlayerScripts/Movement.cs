@@ -5,12 +5,14 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     private Controller _controller;
+    private Shooting _shooting;
 
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
 
     private void Awake()
     {
+        _shooting = GetComponent<Shooting>();
         _controller = GetComponent<Controller>();
         _rigidbody = GetComponent<Rigidbody2D>();
     }
@@ -28,6 +30,8 @@ public class Movement : MonoBehaviour
     private void Move(Vector2 direction)
     {
         _movementDirection = direction;
+        _shooting.SetPlayerSpeed(direction);
+
     }
 
     private void ApplyMovement(Vector2 direction)
