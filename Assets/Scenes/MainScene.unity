@@ -5805,8 +5805,6 @@ MonoBehaviour:
   EnemySpawn: {fileID: 0}
   PauseMenu: {fileID: 645707528}
   SettingMenu: {fileID: 2018849327}
-  timeText: {fileID: 1692688655}
-  scoreText: {fileID: 1204114421}
 --- !u!1 &1297366831
 GameObject:
   m_ObjectHideFlags: 0
@@ -9458,7 +9456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2000824526
 Transform:
   m_ObjectHideFlags: 0
