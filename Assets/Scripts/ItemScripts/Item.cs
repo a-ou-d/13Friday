@@ -5,7 +5,7 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public ItemData itemdata;
-
+  
     private string Name;
     private int Recover;
     private float Damages;
@@ -25,12 +25,13 @@ public class Item : MonoBehaviour
     }
     private void Start()
     {
-        Invoke("DestroyItem", lifespan);
+        Invoke("DestroyItem", lifespan); 
     }
     private void DestroyItem()
     {
         Destroy(gameObject);
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

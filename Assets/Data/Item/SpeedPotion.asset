@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 793419f4d418a1445b46d1a3d6f69f73, type: 3}
   m_Name: SpeedPotion
   m_EditorClassIdentifier: 
-  name: 
+  name: SpeedPotion
   desc: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300024, guid: ddf8838d0a06d8d4c9dec9e3bed69260, type: 3}
   recover: 0
   damages: 0
   speed: 0
