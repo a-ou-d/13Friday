@@ -23,6 +23,10 @@ public class Enemy : MonoBehaviour
         speed = enemyStatus._speed;
         hp = enemyStatus._hp;
     }
+    public void TakeDamage(int damage)
+    {
+        enemyStatus._hp -= damage;
+    }
 
     private void Update()
     {
@@ -36,4 +40,5 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }

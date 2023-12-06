@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         limit += Time.deltaTime;
-        timeText.text = limit.ToString("N2");
+        //timeText.text = limit.ToString("N2");
         if (Input.GetButtonDown("Cancel"))
         {
             TogglePause();

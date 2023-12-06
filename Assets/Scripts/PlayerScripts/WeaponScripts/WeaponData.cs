@@ -28,11 +28,13 @@ public class WeaponData : MonoBehaviour
     public float speed;
     public Sprite weaponSprite;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enumy")
+        if (collision.gameObject.tag == "Enemy")
         {
+            Enemy enemy = gameObject.GetComponent<Enemy>();
 
+            enemy.TakeDamage(damage);
         }
     }
 }
