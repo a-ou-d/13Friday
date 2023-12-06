@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,8 +28,9 @@ public class GameManager : MonoBehaviour
     {
         GameObject sadako = Instantiate(SadakoPrefab, Vector3.zero, Quaternion.identity);
         PlayerController sadakoController = sadako.GetComponent<PlayerController>();
-        ICharacterSkills sadakoSkills = sadako.GetComponent<ICharacterSkills>();
+        ICharacterSkills sadakoSkills = sadako.GetComponent<Sadako>();
         sadakoController.SetCharacterSkills(sadakoSkills);
+
         if (Instance == null)
         {
 
