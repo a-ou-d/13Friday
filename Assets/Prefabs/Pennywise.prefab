@@ -12,11 +12,12 @@ GameObject:
   - component: {fileID: 8849765555958153851}
   - component: {fileID: 4516222796229880423}
   - component: {fileID: 5021115394396636742}
+  - component: {fileID: 2548571532394355000}
+  - component: {fileID: 5805112050301500125}
   - component: {fileID: 3572649493464489900}
   - component: {fileID: 1548865966251761264}
-  - component: {fileID: 2548571532394355000}
   - component: {fileID: 8028034976632267691}
-  - component: {fileID: 5805112050301500125}
+  - component: {fileID: -4384580230880014727}
   - component: {fileID: 6454748731842841857}
   - component: {fileID: -7612523623618969739}
   m_Layer: 0
@@ -144,6 +145,31 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &2548571532394355000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458201390686525031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4864ac0e1abe78d41a1c2416239f97e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Aim: {x: 0, y: 0}
+--- !u!114 &5805112050301500125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458201390686525031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378528273901de84a9b148f612bdd583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3572649493464489900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,18 +197,6 @@ MonoBehaviour:
   armRenderer: {fileID: 376856099850106660}
   armPivot: {fileID: 8031851065280139716}
   charcterRenderer: {fileID: 1853819955333482569}
---- !u!114 &2548571532394355000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458201390686525031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4864ac0e1abe78d41a1c2416239f97e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8028034976632267691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponSpawnPoint: {fileID: 4715011169367815695}
---- !u!114 &5805112050301500125
+--- !u!114 &-4384580230880014727
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -205,7 +219,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 458201390686525031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 378528273901de84a9b148f612bdd583, type: 3}
+  m_Script: {fileID: 11500000, guid: d71e698ebfb728442a51101c578221e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6454748731842841857

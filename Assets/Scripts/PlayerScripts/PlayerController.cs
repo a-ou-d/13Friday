@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,41 +7,72 @@ public class PlayerController : Controller
     SpriteRenderer spriteRenderer;
     private Camera _camera;
     private ICharacterSkills characterSkills;
+    public Vector2 Aim;
+
+    private bool skillCooldown = false;
+
     private void Awake()
     {
         _camera = Camera.main;
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
+
     public void OnMove(InputValue value)
     {
         Vector2 moveInput = value.Get<Vector2>().normalized;
         CallMoveEvent(moveInput);
     }
+
     public void OnLook(InputValue value)
     {
-        Vector2 newAim = value.Get<Vector2>();
-        Vector2 worldPos = _camera.ScreenToWorldPoint(newAim);
-        newAim = (worldPos - (Vector2)transform.position).normalized;
-        if (newAim.magnitude >= .9f)
+        Aim = value.Get<Vector2>();
+        Vector2 worldPos = _camera.ScreenToWorldPoint(Aim);
+        Aim = (worldPos - (Vector2)transform.position).normalized;
+        if (Aim.magnitude >= .9f)
         {
-            CallLookEvent(newAim);
+            CallLookEvent(Aim);
         }
     }
+
     public void OnFire(InputValue value)
     {
         Debug.Log("OnFire" + value.ToString());
         _isAttacking = value.isPressed;
     }
+
+    public void SetCharacterSkills(ICharacterSkills skills)
+    {
+        characterSkills = skills;
+    }
+
     public void OnSkill()
     {
-        Debug.Log("OnSkill");
+        if (!skillCooldown)
+        {
+            StartCoroutine(SkillCooldown());
+        }
+        else
+        {
+            Debug.Log("스킬이 준비중입니다.");
+        }
+    }
+
+    private IEnumerator SkillCooldown()
+    {
+        skillCooldown = true;
+
+        Debug.Log(characterSkills);
         if (characterSkills != null)
         {
             characterSkills.UseSkill();
         }
-    }
-    public void SetCharacterSkills(ICharacterSkills skills)
-    {
-        characterSkills = skills;
+        else
+        {
+            Debug.LogWarning("CharacterSkills is null.");
+        }
+
+        // 15초 대기
+        yield return new WaitForSeconds(15f);
+        skillCooldown = false;
     }
 }
