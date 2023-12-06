@@ -80,4 +80,9 @@ public class StageManager : MonoBehaviour // 스테이지 관리 + 캐릭터,스테이지 잠�
             Debug.LogError("Invalid stage number: " + stageNumber);
         }
     }
+
+    public void RestartStage()
+    {
+        ChangeStage(currentStage);
+    }
 }

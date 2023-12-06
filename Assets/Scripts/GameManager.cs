@@ -18,13 +18,9 @@ public class GameManager : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject SettingMenu;
 
-    public Text timeText;
-    float limit = 0f;
-
-    private bool isGamePaused = false;
-    private bool isPaused = false;    
-
     public Text kill;
+
+    private bool isPaused = false;
 
     private void Awake()
     {
@@ -79,83 +75,47 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        limit += Time.deltaTime;
-        timeText.text = limit.ToString("N2");
         if (Input.GetButtonDown("Cancel"))
         {
             TogglePause();
         }
-        Debug.Log("1");
     }
 
     public void OnPauseButtonClicked()
     {
-        // 버튼 클릭 시 일시정지 토글
         TogglePause();
     }
+
     public void OnSettingButtonClicked()
-    {        
+    {
         ToggleSetting();
     }
 
     public void OnContinueButtonClicked()
     {
-        // 계속하기 버튼 클릭 시 게임 재개
         ResumeGame();
-    }   
+    }
 
     void TogglePause()
     {
-        // 일시정지 상태 전환
         isPaused = !isPaused;
-
-        // 일시정지 시 일시정지 메뉴 활성화
         PauseMenu.SetActive(isPaused);
-
-        if (isPaused)
-        {
-            // 게임 일시정지
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            // 게임 재개
-            Time.timeScale = 1f;
-        }
+        Time.timeScale = isPaused ? 0f : 1f;
     }
 
     void ToggleSetting()
-    {        
+    {
         isPaused = !isPaused;
-        
         SettingMenu.SetActive(isPaused);
-
-        if (isPaused)
-        {            
-            Time.timeScale = 0f;
-        }
-        else
-        {            
-            Time.timeScale = 1f;
-        }
+        Time.timeScale = isPaused ? 0f : 1f;
     }
 
     void ResumeGame()
     {
-        // 일시정지, 셋팅 메뉴 비활성화
         PauseMenu.SetActive(false);
         SettingMenu.SetActive(false);
-
-        if (isGamePaused)
-        {
-            Time.timeScale = 1f;
-        }
-        else
-        {
-            Time.timeScale = 0f;
-        }
-
-        isGamePaused = !isGamePaused;
+        isPaused = false;
+        Time.timeScale = 1f;
     }
 
     private void GameOver()
