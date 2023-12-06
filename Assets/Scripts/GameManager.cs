@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,8 +12,9 @@ public class GameManager : MonoBehaviour
     public GameObject SadakoPrefab;
     public GameObject PennywisePrefab;
     public GameObject SawPrefab;
-    private int Life;
+    [SerializeField]private int Life = 3;
 
+    public GameObject EnemySpawn;
     public GameObject PauseMenu;
     public GameObject SettingMenu;
     public Text timeText;
@@ -26,6 +28,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        GameManager.Instance = this;    
+
         //사다코 게임매니저에서 생성 및 스킬 입력
         //GameObject sadako = Instantiate(SadakoPrefab, Vector3.zero, Quaternion.identity);
         //PlayerController sadakoController = sadako.GetComponent<PlayerController>();
@@ -33,32 +37,25 @@ public class GameManager : MonoBehaviour
         //sadakoController.SetCharacterSkills(sadakoSkills);
         
         //패니와이저 게임매니저에서 생성 및 스킬 입력
-        GameObject pennywise = Instantiate(PennywisePrefab, Vector3.zero, Quaternion.identity);
-        PlayerController pennywiseController = pennywise.GetComponent<PlayerController>();
-        ICharacterSkills pennywiseSkills = pennywise.GetComponent<Pennywise>();
-        pennywiseController.SetCharacterSkills(pennywiseSkills);
+        //GameObject pennywise = Instantiate(PennywisePrefab, Vector3.zero, Quaternion.identity);
+        //PlayerController pennywiseController = pennywise.GetComponent<PlayerController>();
+        //ICharacterSkills pennywiseSkills = pennywise.GetComponent<Pennywise>();
+        //pennywiseController.SetCharacterSkills(pennywiseSkills);
 
         //제이슨 게임매니저에서 생성 및 스킬 입력
         //GameObject jason = Instantiate(JasonPrefab, Vector3.zero, Quaternion.identity);
         //PlayerController jasonController = jason.GetComponent<PlayerController>();
-        //ICharacterSkills jasonSkills = jason.GetComponent<Pennywise>();
+        //ICharacterSkills jasonSkills = jason.GetComponent<Jason>();
         //jasonController.SetCharacterSkills(jasonSkills);
 
         //쏘우 게임매니저에서 생성 및 스킬 입력
-        //GameObject saw = Instantiate(SawPrefab, Vector3.zero, Quaternion.identity);
-        //PlayerController sawController = saw.GetComponent<PlayerController>();
-        //ICharacterSkills sawSkills = saw.GetComponent<Pennywise>();
-        //sawController.SetCharacterSkills(sawSkills);
+        GameObject saw = Instantiate(SawPrefab, Vector3.zero, Quaternion.identity);
+        PlayerController sawController = saw.GetComponent<PlayerController>();
+        ICharacterSkills sawSkills = saw.GetComponent<Saw>();
+        sawController.SetCharacterSkills(sawSkills);
 
-        if (Instance == null)
-        {
+        GameObject enemySpawn = Instantiate(EnemySpawn, Vector3.zero, Quaternion.identity);
 
-            Life = 3;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
     }
 
     public void DecreaseLife(int amount)
@@ -75,7 +72,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         limit += Time.deltaTime;
-        timeText.text = limit.ToString("N2");
+        //timeText.text = limit.ToString("N2");
         if (Input.GetButtonDown("Cancel"))
         {
             TogglePause();
@@ -166,6 +163,7 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         // 게임 오버 시의 처리
+        SceneManager.LoadScene("DieScene");
         Debug.Log("Game Over");
     }
 }

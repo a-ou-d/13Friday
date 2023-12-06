@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 6051486829039073956}
   m_Layer: 0
   m_Name: Boss1
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
