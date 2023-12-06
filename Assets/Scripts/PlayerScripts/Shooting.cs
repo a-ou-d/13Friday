@@ -4,14 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public enum WeaponType
-{
-    Machete,
-    TV,
-    Balloon,
-    Saw,
-}
-
 public class Shooting : MonoBehaviour
 {
     [SerializeField] private Transform _weaponSpawnPoint; // 던질 무기가 생성 될 위치 입니다.
@@ -23,9 +15,9 @@ public class Shooting : MonoBehaviour
 
     private GameObject weaponPrefab;
 
-    private float playerSpeed;
+    private Vector2 playerSpeed;
 
-    public void SetPlayerSpeed(float speed)
+    public void SetPlayerSpeed(Vector2 speed)
     {
         playerSpeed = speed;
     }
@@ -72,8 +64,12 @@ public class Shooting : MonoBehaviour
         //}
     }
 
+    //private int SetingWeaponDataType()
+    //{
+        
+    //}
 
-    public GameObject SetingWeaponPrefab(int type)
+    public GameObject SetingWeaponPrefab()
     {
 
         WeaponDatas weaponData = _weaponLoader.weaponLoader;
@@ -81,25 +77,27 @@ public class Shooting : MonoBehaviour
 
         // 각 무기 데이터로부터 로드한 프리팹을 이용하여 무기 생성
             
-        GameObject weaponPrefab = _weaponLoader.LoadWeaponPrefab(weaponData.Datas[type].weaponPrefabAddress); //프리팹의 주소를 받아옴
-
-
+        GameObject weaponPrefab = _weaponLoader.LoadWeaponPrefab(weaponData.Datas[1].weaponPrefabAddress); //프리팹의 주소를 받아옴
 
         // 무기 데이터를 이용하여 무기 설정
         GameObject weaponInstance = Instantiate(weaponPrefab, _weaponSpawnPoint.position, Quaternion.identity); // 그 주소로 생성
         Rigidbody2D _weaponRigidbody = weaponInstance.GetComponent<Rigidbody2D>();
 
         WeaponData _weaponData = weaponInstance.GetComponent<WeaponData>(); // 무기의 GameObject 데이터 설정을 위한 MonoBehaviour를 가지고있는 WeaponData로 가져옴
-        _weaponData.type = weaponData.Datas[type].type;
-        _weaponData.name = weaponData.Datas[type].name;
-        _weaponData.damage = weaponData.Datas[type].damage;
-        _weaponData.attackSpeed = weaponData.Datas[type].attackSpeed;
-        _weaponData.speed = weaponData.Datas[type].speed;;
+        _weaponData.type = weaponData.Datas[1].type;
+        _weaponData.name = weaponData.Datas[1].name;
+        _weaponData.damage = weaponData.Datas[1].damage;
+        _weaponData.attackSpeed = weaponData.Datas[1].attackSpeed;
+        _weaponData.speed = weaponData.Datas[1].speed;;
 
-        // float weaponSpeed = _weaponData.speed + playerSpeed;
+        if (playerSpeed.magnitude <= 0)
+        {
+            playerSpeed += _aimDirection;
+        }
+
         // 무기 발사
 
-        _weaponRigidbody.AddForce(_aimDirection * _weaponData.speed, ForceMode2D.Impulse);
+        _weaponRigidbody.AddForce(playerSpeed + _aimDirection * _weaponData.speed, ForceMode2D.Impulse);
 
         Destroy(weaponInstance, 10f);
 
