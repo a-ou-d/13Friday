@@ -21,6 +21,8 @@ public class WeaponDatas
 
 public class WeaponData : MonoBehaviour
 {
+
+
     public int type;
     public string name;
     public int damage;
@@ -32,7 +34,7 @@ public class WeaponData : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Enemy enemy = gameObject.GetComponent<Enemy>();
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
 
             enemy.TakeDamage(damage);
         }

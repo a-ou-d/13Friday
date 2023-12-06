@@ -10,10 +10,11 @@ public class Player : Controller
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Destroy(collision.gameObject);
         if (collision.CompareTag("Enemy") && canTakeDamage)
-        {
-            
+        {           
             PlayerTakeDamage();
+            
             //5ÃÊµ¿¾È TakeDamage ÇÔ¼ö ¸ØÃã
             StartCoroutine(DisableDamageForSeconds(2f));
         }

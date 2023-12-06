@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject SadakoPrefab;
     public GameObject PennywisePrefab;
     public GameObject SawPrefab;
-    private int Life;
+    [SerializeField]private int Life = 3;
 
     public GameObject PauseMenu;
     public GameObject SettingMenu;
@@ -26,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        GameManager.Instance = this;    
+
         //사다코 게임매니저에서 생성 및 스킬 입력
         //GameObject sadako = Instantiate(SadakoPrefab, Vector3.zero, Quaternion.identity);
         //PlayerController sadakoController = sadako.GetComponent<PlayerController>();
@@ -50,15 +53,6 @@ public class GameManager : MonoBehaviour
         //ICharacterSkills sawSkills = saw.GetComponent<Pennywise>();
         //sawController.SetCharacterSkills(sawSkills);
 
-        if (Instance == null)
-        {
-
-            Life = 3;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
     }
 
     public void DecreaseLife(int amount)
@@ -166,6 +160,7 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         // 게임 오버 시의 처리
+        SceneManager.LoadScene("DieScene");
         Debug.Log("Game Over");
     }
 

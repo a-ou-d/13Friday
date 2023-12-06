@@ -15,6 +15,8 @@ public class EnemyStatus
 
     }
 
+
+
     public EnemyStatus(EnemyType enemyType, string name, int hp, float speed)
     {
         _enemyType = enemyType;
@@ -22,7 +24,7 @@ public class EnemyStatus
         _hp = hp;
         _speed = speed;
     }
-
+    
     public EnemyStatus SetStatus(EnemyType enemyType)
     {
         EnemyStatus enemyStatus = null;
@@ -54,6 +56,7 @@ public class EnemyStatus
                 enemyStatus = new EnemyStatus(enemyType, "Drill", 100, 7f);
                 break;
         }
+
 
         return enemyStatus;
     }
