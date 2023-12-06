@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject SadakoPrefab;
     public GameObject PennywisePrefab;
     public GameObject SawPrefab;
+    public GameObject EnemySpawn;
     private int Life;
 
     public GameObject PauseMenu;
@@ -49,6 +50,8 @@ public class GameManager : MonoBehaviour
         //PlayerController sawController = saw.GetComponent<PlayerController>();
         //ICharacterSkills sawSkills = saw.GetComponent<Pennywise>();
         //sawController.SetCharacterSkills(sawSkills);
+
+        GameObject enemySpawn = Instantiate(EnemySpawn, Vector3.zero, Quaternion.identity);
 
         if (Instance == null)
         {
