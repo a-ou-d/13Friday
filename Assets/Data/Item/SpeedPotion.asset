@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 793419f4d418a1445b46d1a3d6f69f73, type: 3}
-  m_Name: HpPotion
+  m_Name: SpeedPotion
   m_EditorClassIdentifier: 
-  name: 
+  itemType: 2
+  name: SpeedPotion
   desc: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300024, guid: ddf8838d0a06d8d4c9dec9e3bed69260, type: 3}
   recover: 0
   damages: 0
   speed: 0
   dropProbability: 10
-  itemPrefab: {fileID: 4341232111370826053, guid: 42fb8714eb7821346a9856f6176be31f, type: 3}
+  itemPrefab: {fileID: 7762417259253994583, guid: df12f82d89c3a074e911502e67764cdc, type: 3}
