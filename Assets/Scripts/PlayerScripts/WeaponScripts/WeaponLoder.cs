@@ -6,6 +6,7 @@ public class WeaponLoader : MonoBehaviour
 {
     private string weaponJsonFile = "JSON/Weapon";
     public WeaponDatas weaponLoader;
+
     private void Start()
     {
         weaponLoader = LoadWeaponData();
@@ -19,6 +20,7 @@ public class WeaponLoader : MonoBehaviour
 
         return dataList;
     }
+
     public GameObject LoadWeaponPrefab(string prefabAddress)
     {
         return Resources.Load<GameObject>(prefabAddress);
