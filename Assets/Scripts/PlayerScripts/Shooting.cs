@@ -58,18 +58,18 @@ public class Shooting : MonoBehaviour
     {
         weaponPrefab = SetingWeaponPrefab();
 
-        if (weaponPrefab != null)
-        {
-            GameObject weaponSpriteObject = new GameObject("WeaponSprite");
+        //if (weaponPrefab != null)
+        //{
+        //    GameObject weaponSpriteObject = new GameObject("WeaponSprite");
 
-            weaponSpriteObject.transform.SetParent(weaponPrefab.transform.Find("WeaponPivot"),false);
+        //    weaponSpriteObject.transform.SetParent(weaponPrefab.transform.Find("WeaponPivot"),false);
 
-            SpriteRenderer weaponSpriteRenderer = weaponSpriteObject.AddComponent<SpriteRenderer>();
+        //    SpriteRenderer weaponSpriteRenderer = weaponSpriteObject.AddComponent<SpriteRenderer>();
 
-            WeaponData weaponData = weaponPrefab.GetComponent<WeaponData>();
+        //    WeaponData weaponData = weaponPrefab.GetComponent<WeaponData>();
 
-            weaponSpriteRenderer.sprite = weaponData.weaponSprite;
-        }
+        //    weaponSpriteRenderer.sprite = weaponData.weaponSprite;
+        //}
     }
 
 
@@ -93,12 +93,7 @@ public class Shooting : MonoBehaviour
         _weaponData.name = weaponData.Datas[1].name;
         _weaponData.damage = weaponData.Datas[1].damage;
         _weaponData.attackSpeed = weaponData.Datas[1].attackSpeed;
-        _weaponData.speed = weaponData.Datas[1].speed;
-
-        SpriteRenderer weaponSpriteRenderer = weaponInstance.GetComponent<SpriteRenderer>();
-
-        Sprite weaponSprite = _weaponLoader.LoadSprite(weaponData.Datas[1].weaponSpriteAddress);
-        weaponSpriteRenderer.sprite = weaponSprite;
+        _weaponData.speed = weaponData.Datas[1].speed;;
 
         float weaponSpeed = _weaponData.speed + playerSpeed;
         // 무기 발사

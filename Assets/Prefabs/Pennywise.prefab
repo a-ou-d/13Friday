@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 8028034976632267691}
   - component: {fileID: 5805112050301500125}
   - component: {fileID: 6454748731842841857}
+  - component: {fileID: -7612523623618969739}
   m_Layer: 0
   m_Name: Pennywise
   m_TagString: Player
@@ -194,12 +195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e2c3fa3c92a87c478363e0e182ab2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponsDatas:
-  - {fileID: 11400000, guid: bbc370dfa78960041b8e260b303861fc, type: 2}
-  - {fileID: 11400000, guid: e0644aedd55d9eb46816a0b49b400743, type: 2}
-  - {fileID: 11400000, guid: 1a7620e2b57bc354fb639c7bdbd51e29, type: 2}
-  - {fileID: 11400000, guid: 2211634855555e349b45473f68be79ad, type: 2}
-  _weaponPrefab: {fileID: 3005236798305589656, guid: 77c6880d31986c84fa0b1ba854e9443e, type: 3}
   _weaponSpawnPoint: {fileID: 4715011169367815695}
 --- !u!114 &5805112050301500125
 MonoBehaviour:
@@ -257,6 +252,18 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &-7612523623618969739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458201390686525031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc26b243dbb7fd47b495ac0af387cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1268508678354708526
 GameObject:
   m_ObjectHideFlags: 0
