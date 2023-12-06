@@ -1,10 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class ButtonController : MonoBehaviour
 {
+    WeaponLoader weaponLoader;
+    UIManager uiUIManager;
+    private void Awake()
+    {
+        weaponLoader = GetComponent<WeaponLoader>();
+        uiUIManager = GetComponent<UIManager>();
+    }
+
     public int getButtonValue;
+
+
 
     public void OnButtonClick0()
     {
@@ -21,6 +31,13 @@ public class ButtonController : MonoBehaviour
     public void OnButtonClick3()
     {
         getButtonValue = OnButtonClick(3);
+    }
+
+    public void OnButtonRandom()
+    {
+        int randomInt = uiUIManager.GetLastClickedIndex();
+        getButtonValue = OnButtonClick(randomInt);
+        SceneManager.LoadScene("SampleScene");
     }
 
     private int OnButtonClick(int value)
