@@ -7,7 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager Instance { get; private set; }
+    private int destroyObjectCount = 0;
+    public Text kill;
+
     public GameObject JasonPrefab;
     public GameObject SadakoPrefab;
     public GameObject PennywisePrefab;
@@ -18,14 +21,10 @@ public class GameManager : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject SettingMenu;
 
-    public Text kill;
-
     private bool isPaused = false;
 
     private void Awake()
     {
-        GameManager.Instance = this;    
-
         //사다코 게임매니저에서 생성 및 스킬 입력
         //GameObject sadako = Instantiate(SadakoPrefab, Vector3.zero, Quaternion.identity);
         //PlayerController sadakoController = sadako.GetComponent<PlayerController>();
@@ -52,6 +51,15 @@ public class GameManager : MonoBehaviour
 
         GameObject enemySpawn = Instantiate(EnemySpawn, Vector3.zero, Quaternion.identity);
 
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     private void Start()
@@ -70,6 +78,20 @@ public class GameManager : MonoBehaviour
         {
             //라이프가 0이하가 됬을시 게임오버씬 부르기
             GameOver();
+        }
+    }
+
+    public static void ObjectDestroyed()
+    {
+        Instance.destroyObjectCount++;
+        Instance.KillCount();
+    }
+
+    private void KillCount()
+    {
+        if (kill != null)
+        {
+            kill.text = destroyObjectCount.ToString();
         }
     }
 
