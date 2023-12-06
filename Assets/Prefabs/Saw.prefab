@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 8473639262413036837}
   - component: {fileID: 6736608930571967874}
   - component: {fileID: 3425023327486903503}
+  - component: {fileID: -4420101560835300881}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Player
@@ -394,12 +395,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e2c3fa3c92a87c478363e0e182ab2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponsDatas:
-  - {fileID: 11400000, guid: bbc370dfa78960041b8e260b303861fc, type: 2}
-  - {fileID: 11400000, guid: e0644aedd55d9eb46816a0b49b400743, type: 2}
-  - {fileID: 11400000, guid: 1a7620e2b57bc354fb639c7bdbd51e29, type: 2}
-  - {fileID: 11400000, guid: 2211634855555e349b45473f68be79ad, type: 2}
-  _weaponPrefab: {fileID: 3005236798305589656, guid: 77c6880d31986c84fa0b1ba854e9443e, type: 3}
   _weaponSpawnPoint: {fileID: 7470715124164874100}
 --- !u!114 &6736608930571967874
 MonoBehaviour:
@@ -457,6 +452,18 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &-4420101560835300881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8815618381284936745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc26b243dbb7fd47b495ac0af387cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9032892193540473632
 GameObject:
   m_ObjectHideFlags: 0
