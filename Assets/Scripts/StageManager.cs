@@ -6,14 +6,28 @@ using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.SceneManagement;
 using UnityEditor.Experimental.GraphView;
 
-public class StageManager : MonoBehaviour // 스테이지 관리
+public class StageManager : MonoBehaviour // 스테이지 관리 + 캐릭터,스테이지 잠금 해제
 {
     public EnemyBoss boss;
     public GameObject[] stages;
     private int currentStage = -1;
 
+    private void Start()
+    {
+        UnlockFirstStage();
+    }
 
-    private void Update()
+    public void UnlockFirstStage()
+    {
+        int firstStage = 0;
+
+        if (!StageLock.IsStageUnlocked(firstStage))
+        {
+            StageLock.UnlockStage(firstStage);
+        }
+    }
+
+    private void Update() // 보스 죽으면 스테이지 클리어
     {
         if (boss != null && boss.Isdie())
         {
@@ -23,10 +37,9 @@ public class StageManager : MonoBehaviour // 스테이지 관리
 
     public void ClearStage()
     {
-        currentStage++;
-        UnlockCharacterForNextStage();
-        MoveToNextStage();
-        ShowClearScene();
+        currentStage++; // 현재 스테이지 증가
+        UnlockCharacterForNextStage(); // 캐릭터 잠금 해제
+        ShowClearScene(); // 클리어씬 호출
 
         StageLock.UnlockStage(currentStage + 1);
     }
@@ -44,21 +57,6 @@ public class StageManager : MonoBehaviour // 스테이지 관리
             case 2:
                 CharacterLock.UnlockCharacter("Jigsaw");
                 break;
-        }
-    }
-
-    private void MoveToNextStage()
-    {
-        if (currentStage + 1 < stages.Length)
-        {
-            for (int i = 0; i < stages.Length; i++)
-            {
-                stages[i].SetActive(i == currentStage + 1);
-            }
-        }
-        else
-        {
-            SceneManager.LoadScene("EndingScene");
         }
     }
 

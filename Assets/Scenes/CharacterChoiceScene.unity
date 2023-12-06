@@ -466,7 +466,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1512,7 +1512,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 744393790}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1480595042}
+        m_TargetAssemblyTypeName: CharacterChoiceManager, Assembly-CSharp
+        m_MethodName: SelectCharacter
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Sadako
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &744393790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1718,7 +1730,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1873,11 +1885,13 @@ MonoBehaviour:
   JasonPrefab: {fileID: 5987108871860618664, guid: 84c6ef4d5ed5f054f8473b7c9152c549, type: 3}
   SadakoPrefab: {fileID: 4226328214236220641, guid: 3a5f7ac176372174bb7f25a7fe991e9d, type: 3}
   PennywisePrefab: {fileID: 458201390686525031, guid: 5a80c156354e7da47a93bd88a97a983a, type: 3}
-  SawPrefab: {fileID: 8815618381284936745, guid: 6380332a0ebad4747b1dc99679c6a0fd, type: 3}
+  JigsawPrefab: {fileID: 0}
   Life: 3
   EnemySpawn: {fileID: 7901755907796988323, guid: 7dc0b7c96bbda6f41b86df968ff615fc, type: 3}
   PauseMenu: {fileID: 0}
   SettingMenu: {fileID: 0}
+  timeText: {fileID: 0}
+  scoreText: {fileID: 0}
 --- !u!4 &906874842
 Transform:
   m_ObjectHideFlags: 0
@@ -2370,6 +2384,7 @@ MonoBehaviour:
   pennywiseButton: {fileID: 1327938290}
   jigsawLock: {fileID: 705992077}
   jigsawButton: {fileID: 1705427924}
+  StageChoice: {fileID: 0}
 --- !u!1 &1327938288
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,7 +2467,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1327938291}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1480595042}
+        m_TargetAssemblyTypeName: CharacterChoiceManager, Assembly-CSharp
+        m_MethodName: SelectCharacter
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Pennywise
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1327938291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2710,7 +2737,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3042,6 +3069,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467110233}
   m_CullTransparentMesh: 1
+--- !u!1 &1480595041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1480595043}
+  - component: {fileID: 1480595042}
+  m_Layer: 0
+  m_Name: CharacterChoiceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1480595042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480595041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 391c4f1739f67cc44b76824aec4d4c79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sadakoLock: {fileID: 306370838}
+  sadakoButton: {fileID: 744393789}
+  pennywiseLock: {fileID: 1261019352}
+  pennywiseButton: {fileID: 1327938290}
+  jigsawLock: {fileID: 705992077}
+  jigsawButton: {fileID: 1705427924}
+  StageChoice: {fileID: 613759537}
+--- !u!4 &1480595043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480595041}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 384.87527, y: 244.64664, z: -4.4587383}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1481593048
 GameObject:
   m_ObjectHideFlags: 0
@@ -3417,7 +3495,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1705427925}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1480595042}
+        m_TargetAssemblyTypeName: CharacterChoiceManager, Assembly-CSharp
+        m_MethodName: SelectCharacter
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Jigsaw
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1705427925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4106,7 +4196,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2093310284}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1480595042}
+        m_TargetAssemblyTypeName: CharacterChoiceManager, Assembly-CSharp
+        m_MethodName: SelectCharacter
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Jason
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2093310284
 MonoBehaviour:
   m_ObjectHideFlags: 0
