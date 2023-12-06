@@ -13,7 +13,8 @@ public class UIManager : MonoBehaviour
     public Text[] weaponProjectileSpeedText;
     public Button[] weaponButtons;
 
-    private int lastClickedIndex = -1;
+    private int randomIndex;
+
     private void Start()
     {
         WeaponLoader = GetComponent<WeaponLoader>();
@@ -37,8 +38,8 @@ public class UIManager : MonoBehaviour
         
         for(int i = 0; i < weaponButtons.Length; i++)
         {
-            int randomIndex = Random.Range(5, weaponData.Datas.Count);
-      
+            randomIndex = Random.Range(5, weaponData.Datas.Count);
+
             weaponImage[i].sprite = WeaponLoader.LoadSprite(weaponData.Datas[randomIndex].weaponSpriteAddress);
             weaponNameText[i].text = weaponData.Datas[randomIndex].name;
             weaponDamageText[i].text = "°ø°Ý·Â:" + weaponData.Datas[randomIndex].damage.ToString();
@@ -50,11 +51,11 @@ public class UIManager : MonoBehaviour
 
     private void HandleButtonClick(int buttonIndex)
     {
-        lastClickedIndex = buttonIndex;
+        randomIndex = buttonIndex;
     }
 
     public int GetLastClickedIndex()
     {
-        return lastClickedIndex;   
+        return randomIndex;   
     }
 }
