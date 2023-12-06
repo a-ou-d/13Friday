@@ -10,11 +10,10 @@ public class Controller : MonoBehaviour
     public event Action<Vector2> OnLookEvent;
     public event Action OnAttackEvent;
     public event Action OnSkillEvent;
-
-
+    private float _originalAttackDelay = 0.2f;
     private float _timeSinceLastAttack;
     protected bool _isAttacking { get; set; }
-
+    private bool _isUsingSkill;
     protected virtual void Update()
     {
         HandleAttackDelay();
@@ -23,12 +22,13 @@ public class Controller : MonoBehaviour
     private void HandleAttackDelay()
     {
 
-        if (_timeSinceLastAttack <= 0.2f)
+        float currentAttackDelay = _isUsingSkill ? _originalAttackDelay / 2f : _originalAttackDelay;
+
+        if (_timeSinceLastAttack <= currentAttackDelay)
         {
             _timeSinceLastAttack += Time.deltaTime;
         }
-
-        else if (_isAttacking && _timeSinceLastAttack > 0.2f)
+        else if (_isAttacking && _timeSinceLastAttack > currentAttackDelay)
         {
             _timeSinceLastAttack = 0f;
             CallAttackEvent();
@@ -36,7 +36,14 @@ public class Controller : MonoBehaviour
 
 
     }
-
+    public void SetIsUsingSkill(bool isUsingSkill)
+    {
+        _isUsingSkill = isUsingSkill;
+    }
+    public float GetOriginalAttackDelay()
+    {
+        return _originalAttackDelay;
+    }
     public void CallMoveEvent(Vector2 direction)
     {
         OnMoveEvent?.Invoke(direction);

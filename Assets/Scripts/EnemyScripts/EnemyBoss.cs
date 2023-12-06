@@ -13,6 +13,8 @@ public class EnemyBoss : MonoBehaviour
     [SerializeField] private float keepDistance;
     [SerializeField] private float speed;
     [SerializeField] private int hp;
+    public bool isdie = false;
+
     float distance;
 
     public EnemyBossType enemyBossType;
@@ -38,4 +40,15 @@ public class EnemyBoss : MonoBehaviour
             transform.position += dir * speed * Time.deltaTime;
         }
     }
+
+    public bool Isdie()
+    {
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+            return true;
+        }
+        return false;
+    }
+
 }
