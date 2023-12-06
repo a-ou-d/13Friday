@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject JasonPrefab;
     public GameObject SadakoPrefab;
     public GameObject PennywisePrefab;
-    public GameObject SawPrefab;
+    public GameObject JigsawPrefab;
     [SerializeField]private int Life = 3;
 
     public GameObject EnemySpawn;
@@ -50,9 +50,9 @@ public class GameManager : MonoBehaviour
         //jasonController.SetCharacterSkills(jasonSkills);
 
         //쏘우 게임매니저에서 생성 및 스킬 입력
-        GameObject saw = Instantiate(SawPrefab, Vector3.zero, Quaternion.identity);
-        PlayerController sawController = saw.GetComponent<PlayerController>();
-        ICharacterSkills sawSkills = saw.GetComponent<Saw>();
+        GameObject Jigsaw = Instantiate(JigsawPrefab, Vector3.zero, Quaternion.identity);
+        PlayerController sawController = Jigsaw.GetComponent<PlayerController>();
+        ICharacterSkills sawSkills = Jigsaw.GetComponent<Saw>();
         sawController.SetCharacterSkills(sawSkills);
 
         GameObject enemySpawn = Instantiate(EnemySpawn, Vector3.zero, Quaternion.identity);

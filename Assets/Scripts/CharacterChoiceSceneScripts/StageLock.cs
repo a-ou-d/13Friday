@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StageLock : MonoBehaviour
+public class StageLock : MonoBehaviour // 스테이지 잠금 상태 관리
 {
     private const string StageUnlockKey = "StageUnlocked_";
 
