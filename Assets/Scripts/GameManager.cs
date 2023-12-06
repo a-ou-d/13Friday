@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject SawPrefab;
     [SerializeField]private int Life = 3;
 
+    public GameObject EnemySpawn;
     public GameObject PauseMenu;
     public GameObject SettingMenu;
     public Text timeText;

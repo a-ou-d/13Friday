@@ -35,9 +35,9 @@ public class WeaponData : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-
             enemy.TakeDamage(damage);
         }
+        Destroy(gameObject);
     }
 }
 
