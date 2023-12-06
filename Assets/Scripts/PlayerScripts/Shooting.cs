@@ -88,7 +88,7 @@ public class Shooting : MonoBehaviour
         _weaponData.name = weaponData.Datas[weaponDataIndex].name;
         _weaponData.damage = weaponData.Datas[weaponDataIndex].damage;
         _weaponData.attackSpeed = weaponData.Datas[weaponDataIndex].attackSpeed;
-        _weaponData.speed = weaponData.Datas[weaponDataIndex].speed;;
+        _weaponData.speed = weaponData.Datas[weaponDataIndex].speed;
 
         if (playerSpeed.magnitude <= 0)
         {
