@@ -24,8 +24,7 @@ public class GameManager : MonoBehaviour
     private bool isGamePaused = false;
     private bool isPaused = false;    
 
-    public Text scoreText;
-    int totalScore;
+    public Text kill;
 
     private void Awake()
     {
@@ -81,7 +80,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         limit += Time.deltaTime;
-        //timeText.text = limit.ToString("N2");
+        timeText.text = limit.ToString("N2");
         if (Input.GetButtonDown("Cancel"))
         {
             TogglePause();
