@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7298385021270601933}
   - component: {fileID: 8247832355741981233}
   - component: {fileID: 7887486957678812088}
-  - component: {fileID: -5002460964438886967}
   m_Layer: 0
   m_Name: EnemyFire
   m_TagString: Weapon
@@ -149,15 +148,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.16
---- !u!114 &-5002460964438886967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691728342460120226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67af05f862ea3cf448394bbfb0fdac2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
