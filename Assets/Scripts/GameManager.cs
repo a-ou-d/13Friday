@@ -17,14 +17,15 @@ public class GameManager : MonoBehaviour
     public GameObject EnemySpawn;
     public GameObject PauseMenu;
     public GameObject SettingMenu;
+
     public Text timeText;
-    private bool isGamePaused = false;
-    private bool isPaused = false;
     float limit = 0f;
+
+    private bool isGamePaused = false;
+    private bool isPaused = false;    
 
     public Text scoreText;
     int totalScore;
-
 
     private void Awake()
     {
@@ -85,6 +86,7 @@ public class GameManager : MonoBehaviour
         {
             TogglePause();
         }
+        Debug.Log("1");
     }
 
     public void OnPauseButtonClicked()
@@ -160,12 +162,6 @@ public class GameManager : MonoBehaviour
         }
 
         isGamePaused = !isGamePaused;
-    }
-
-    public void addScore(int score)
-    {
-        totalScore += score;
-        scoreText.text = totalScore.ToString();
     }
 
     private void GameOver()
