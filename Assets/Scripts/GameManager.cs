@@ -59,6 +59,14 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        PlayerPrefs.SetInt(CharacterLock.UnlockKey + "Sadako", 0);
+        PlayerPrefs.SetInt(CharacterLock.UnlockKey + "Pennywise", 0);
+        PlayerPrefs.SetInt(CharacterLock.UnlockKey + "Jigsaw", 0);
+        PlayerPrefs.Save();
+    }
+
     public void DecreaseLife(int amount)
     {
         Life -= amount;

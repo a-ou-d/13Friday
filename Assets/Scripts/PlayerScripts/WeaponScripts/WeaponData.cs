@@ -21,8 +21,6 @@ public class WeaponDatas
 
 public class WeaponData : MonoBehaviour
 {
-
-
     public int type;
     public string name;
     public int damage;
