@@ -76,5 +76,6 @@ public class StageManager : MonoBehaviour
         //점수 초기화
         //장애물 및 적 초기화
         //등등 추가
+        //씬매니저로 해당 씬 로드하면 될 것 같습니다.
     }
 }
