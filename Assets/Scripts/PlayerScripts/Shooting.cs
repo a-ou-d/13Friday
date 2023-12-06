@@ -12,7 +12,7 @@ public class Shooting : MonoBehaviour
     private WeaponLoader _weaponLoader;
     private ButtonController buttonValue;
 
-    private GameObject weaponPrefab;
+    public GameObject weaponPrefab;
 
     private Vector2 playerSpeed;
 

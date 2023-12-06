@@ -11,7 +11,6 @@
         "weaponSpriteAddress": "weaponSprite/dot_machete"
 
     },
-
     {
         "type" : 1,
         "name": "CRTTV",
@@ -38,7 +37,95 @@
         "speed": 10,
         "weaponPrefabAddress": "Weapon/HandSaw",
         "weaponSpriteAddress": "weaponSprite/dot_saw"          
+    },
+
+
+    {
+        "type" : 4,
+        "name": "전기톱",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/Chainsaw",
+        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+    },
+    {
+        "type" : 5,
+        "name": "접힌종이",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/FoldedPaper",
+        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+    },
+    {
+        "type" : 6,
+        "name": "유령의손",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/GhostlyHand",
+        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+    },
+
+
+    {
+        "type" : 7,
+        "name": "광대의코인",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/GoldenCoins",
+        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+    },
+    {
+        "type" : 8,
+        "name": "살인마의가면",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/MaskoftheKiller",
+        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+    },
+    {
+        "type" : 9,
+        "name": "악령",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/Soul",
+        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+    },
+
+
+    {
+        "type" : 10,
+        "name": "나뭇가지",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/Stick",
+        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+    },
+    {
+        "type" : 11,
+        "name": "죽음의함정",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/TrapsofDeath",
+        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+    },
+    {
+        "type" : 12,
+        "name": "독특한퍼즐",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/UniquePuzzle",
+        "weaponSpriteAddress": "weaponSprite/dot_saw"          
     }
+    
 ]
 
 }
