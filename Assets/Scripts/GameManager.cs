@@ -166,5 +166,4 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("DieScene");
         Debug.Log("Game Over");
     }
-
 }
