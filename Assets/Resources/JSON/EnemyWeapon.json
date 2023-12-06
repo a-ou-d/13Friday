@@ -1,0 +1,16 @@
+{
+    "Datas":
+    [   
+   {
+        "type" : 0,
+        "name": "EnemyWeapon",
+        "damage": 1,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "EnemyWeapon/EnemyFire",    
+        "weaponSpriteAddress": "weaponSprite/dot_machete"
+
+    }
+]
+
+}

@@ -12,6 +12,7 @@ public class WeaponLoader : MonoBehaviour
         weaponLoader = LoadWeaponData();
     }
 
+
     public WeaponDatas LoadWeaponData()
     {
         TextAsset jsonFile = Resources.Load<TextAsset>(weaponJsonFile);

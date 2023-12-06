@@ -8367,6 +8367,7 @@ MonoBehaviour:
   PennywisePrefab: {fileID: 0}
   SawPrefab: {fileID: 0}
   Life: 3
+  EnemySpawn: {fileID: 0}
   PauseMenu: {fileID: 645707528}
   SettingMenu: {fileID: 1120255825}
   timeText: {fileID: 0}
