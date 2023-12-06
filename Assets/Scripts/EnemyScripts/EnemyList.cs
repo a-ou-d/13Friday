@@ -14,6 +14,11 @@ public enum EnemyType
     Drill = 7,
 }
 
+public enum EnemyNamedType
+{
+    Named1 = 0,
+}
+
 public enum EnemyBossType
 {
     Boss1 = 0,

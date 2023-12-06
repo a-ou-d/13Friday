@@ -53,4 +53,10 @@ MonoBehaviour:
   - {fileID: 43842599538870038, guid: 144dc8a369499f442bdaa88deee1d95d, type: 3}
   - {fileID: 1318657474560095981, guid: 319187690899c3146868f6375f3078b8, type: 3}
   - {fileID: 3236102604974020413, guid: 5b8d90349f9b67644889e37d91dd3b94, type: 3}
+  named:
+  - {fileID: 6001301590165723373, guid: fe78417bae177c5418bb67111a972105, type: 3}
+  boss:
+  - {fileID: 5881556462795915756, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
   spawnInterval: 1
+  namedSpawnInterval: 30
+  bossSpawnInterval: 600
