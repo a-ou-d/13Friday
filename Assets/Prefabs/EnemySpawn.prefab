@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 2139366583879014674, guid: 930cca6972d18694fa867abf539cc244, type: 3}
+  - {fileID: 1042718197362471273, guid: 930cca6972d18694fa867abf539cc244, type: 3}
   - {fileID: 2920109798228459026, guid: d94ec1496e17abf41b0815eea12a859f, type: 3}
   - {fileID: 1278962964249439742, guid: ca5ce95d12fa6d24d863e2ee05f03ae5, type: 3}
   - {fileID: 7323992688677183823, guid: f1fa14002a1d36745ba01edc6349b9a4, type: 3}
@@ -53,4 +53,10 @@ MonoBehaviour:
   - {fileID: 43842599538870038, guid: 144dc8a369499f442bdaa88deee1d95d, type: 3}
   - {fileID: 1318657474560095981, guid: 319187690899c3146868f6375f3078b8, type: 3}
   - {fileID: 3236102604974020413, guid: 5b8d90349f9b67644889e37d91dd3b94, type: 3}
+  named:
+  - {fileID: 6001301590165723373, guid: fe78417bae177c5418bb67111a972105, type: 3}
+  boss:
+  - {fileID: 5881556462795915756, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
   spawnInterval: 1
+  namedSpawnInterval: 30
+  bossSpawnInterval: 600
