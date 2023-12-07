@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Saw : MonoBehaviour, ICharacterSkills
+public class Jigsaw : MonoBehaviour, ICharacterSkills
 {
     private Controller _controller;
 

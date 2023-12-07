@@ -29,6 +29,11 @@ public class EnemyBoss : MonoBehaviour
         keepDistance = enemyBossStatus._keepDistance;
     }
 
+    public void TakeDamage(int damage)
+    {
+        hp -= damage;
+    }
+
     private void Update()
     {
         targetPosition = targetPlayer.transform.position;
@@ -45,6 +50,7 @@ public class EnemyBoss : MonoBehaviour
     {
         if (hp <= 0)
         {
+            GameManager.ObjectDestroyed();
             Destroy(gameObject);
             return true;
         }

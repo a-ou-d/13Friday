@@ -52,6 +52,7 @@ public class GoldenDooki : MonoBehaviour
         if (Hp <= 0)
         {
             Debug.Log("µÎÅ°Áê±Ý ¤Ð¤Ð");
+            GameManager.ObjectDestroyed();
             Destroy(gameObject);
             OnDestroy();
         }
