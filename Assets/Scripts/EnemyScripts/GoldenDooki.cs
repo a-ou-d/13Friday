@@ -48,6 +48,7 @@ public class GoldenDooki : MonoBehaviour
                 transform.position += (Vector3)directionToOriginal * speed * Time.deltaTime;
             }
         }
+        IsDead();
     }
     public void TakeDamage(int damage)
     {

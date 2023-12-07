@@ -858,6 +858,7 @@ GameObject:
   - component: {fileID: 593718822}
   - component: {fileID: 593718821}
   - component: {fileID: 593718820}
+  - component: {fileID: 593718824}
   m_Layer: 5
   m_Name: SettingMenu
   m_TagString: Untagged
@@ -949,6 +950,29 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &593718824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593718819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80a9a611e47e624385f0f6670288b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kill: {fileID: 0}
+  JasonPrefab: {fileID: 0}
+  SadakoPrefab: {fileID: 0}
+  PennywisePrefab: {fileID: 0}
+  JigsawPrefab: {fileID: 0}
+  Life: 3
+  speed: 0
+  IncreaseDamage: 0
+  EnemySpawn: {fileID: 0}
+  PauseMenu: {fileID: 704854743}
+  SettingMenu: {fileID: 593718819}
 --- !u!1 &604075079
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,6 +1022,7 @@ GameObject:
   - component: {fileID: 704854746}
   - component: {fileID: 704854745}
   - component: {fileID: 704854744}
+  - component: {fileID: 704854748}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -1088,6 +1113,29 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &704854748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704854743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80a9a611e47e624385f0f6670288b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kill: {fileID: 0}
+  JasonPrefab: {fileID: 0}
+  SadakoPrefab: {fileID: 0}
+  PennywisePrefab: {fileID: 0}
+  JigsawPrefab: {fileID: 0}
+  Life: 3
+  speed: 0
+  IncreaseDamage: 0
+  EnemySpawn: {fileID: 0}
+  PauseMenu: {fileID: 704854743}
+  SettingMenu: {fileID: 593718819}
 --- !u!1 &707541130
 GameObject:
   m_ObjectHideFlags: 0
@@ -3101,6 +3149,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714335905}
   m_CullTransparentMesh: 1
+--- !u!1001 &1819017097
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3617640883811081655, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617640883811081655, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617640883811081655, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617640883811081655, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617640883811081655, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617640883811081655, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617640883811081655, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617640883811081655, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617640883811081655, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617640883811081655, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617640883811081655, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622988509903434572, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: PauseMenu
+      value: 
+      objectReference: {fileID: 704854743}
+    - target: {fileID: 7622988509903434572, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: EnemySpawn
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622988509903434572, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: JasonPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622988509903434572, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: SettingMenu
+      value: 
+      objectReference: {fileID: 593718819}
+    - target: {fileID: 7622988509903434572, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: JigsawPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622988509903434572, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: SadakoPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622988509903434572, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: PennywisePrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166951901996762307, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5880361573378796451, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3c43324a9f68f9d4696766f9d85c7df8, type: 3}
 --- !u!1 &1873194179
 GameObject:
   m_ObjectHideFlags: 0
