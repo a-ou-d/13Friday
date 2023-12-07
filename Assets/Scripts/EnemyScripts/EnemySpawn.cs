@@ -40,9 +40,9 @@ public class EnemySpawn : MonoBehaviour
 
                 if ((player.transform.position - new Vector3(randomX, randomY, 0f)).magnitude > 4f)
                 {
-                    spawnPos = new Vector2(randomX, randomY);
-                    break;
+                    spawnPos = new Vector2(randomX, randomY);                   
                 }
+                break;
             }
 
             int random = Random.Range(0, enemies.Length);
