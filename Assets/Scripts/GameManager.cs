@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         //쏘우 게임매니저에서 생성 및 스킬 입력
         GameObject Jigsaw = Instantiate(JigsawPrefab, Vector3.zero, Quaternion.identity);
         PlayerController sawController = Jigsaw.GetComponent<PlayerController>();
-        ICharacterSkills sawSkills = Jigsaw.GetComponent<Saw>();
+        ICharacterSkills sawSkills = Jigsaw.GetComponent<Jigsaw>();
         sawController.SetCharacterSkills(sawSkills);
 
         GameObject enemySpawn = Instantiate(EnemySpawn, Vector3.zero, Quaternion.identity);

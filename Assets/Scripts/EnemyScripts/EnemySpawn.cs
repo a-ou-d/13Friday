@@ -19,7 +19,7 @@ public class EnemySpawn : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
-        //InvokeRepeating("SpawnEnemy", spawnInterval, spawnInterval);
+        InvokeRepeating("SpawnEnemy", spawnInterval, spawnInterval);
         InvokeRepeating("SpawnNamed", namedSpawnInterval, namedSpawnInterval);
         Invoke("SpawnBoss", bossSpawnInterval);
     }
