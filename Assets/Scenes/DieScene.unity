@@ -123,6 +123,59 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &54083552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 54083554}
+  - component: {fileID: 54083553}
+  m_Layer: 0
+  m_Name: gameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &54083553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54083552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80a9a611e47e624385f0f6670288b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kill: {fileID: 0}
+  JasonPrefab: {fileID: 0}
+  SadakoPrefab: {fileID: 0}
+  PennywisePrefab: {fileID: 0}
+  JigsawPrefab: {fileID: 0}
+  Life: 3
+  EnemySpawn: {fileID: 0}
+  PauseMenu: {fileID: 0}
+  SettingMenu: {fileID: 0}
+--- !u!4 &54083554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54083552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &246843283
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,9 +883,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2055888974}
-        m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 2055888979}
+        m_TargetAssemblyTypeName: TMP_StartBtn, Assembly-CSharp
+        m_MethodName: CharacterChoiceSceneLoad
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -893,8 +946,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2055888974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c00b9fda396445e46843477b65367e34, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c0690f4515bb474b9ee22449c652add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 0}
-  stages: []
