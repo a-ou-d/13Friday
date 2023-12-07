@@ -37,7 +37,7 @@ public class ButtonController : MonoBehaviour
     {
         int randomInt = uiUIManager.GetLastClickedIndex();
         getButtonValue = OnButtonClick(randomInt);
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("CharacterChoiceScene");
     }
 
     private int OnButtonClick(int value)

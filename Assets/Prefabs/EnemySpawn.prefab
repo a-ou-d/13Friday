@@ -59,4 +59,4 @@ MonoBehaviour:
   - {fileID: 5881556462795915756, guid: 9dfdac332fbf03b47a7b4354a837769a, type: 3}
   spawnInterval: 1
   namedSpawnInterval: 30
-  bossSpawnInterval: 600
+  bossSpawnInterval: 5

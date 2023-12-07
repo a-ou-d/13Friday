@@ -126,7 +126,7 @@ public class EnemyBossStatus
         switch (enemyBossType)
         {
             case EnemyBossType.Boss1:
-                enemyBossStatus = new EnemyBossStatus(enemyBossType, "Boss1", 1000, 6f, 5f);
+                enemyBossStatus = new EnemyBossStatus(enemyBossType, "Boss1", 5, 6f, 5f);
                 break;
         }
 
