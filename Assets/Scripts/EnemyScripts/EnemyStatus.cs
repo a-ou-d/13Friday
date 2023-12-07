@@ -32,28 +32,28 @@ public class EnemyStatus
         switch (enemyType)
         {
             case EnemyType.CampFire:
-                enemyStatus = new EnemyStatus(enemyType, "CampFire", 100, 2f);
+                enemyStatus = new EnemyStatus(enemyType, "CampFire", 20, 0.5f);
                 break;
             case EnemyType.TableChair:
-                enemyStatus = new EnemyStatus(enemyType, "TableChair", 100, 4f);
+                enemyStatus = new EnemyStatus(enemyType, "TableChair", 30, 0.8f);
                 break;
             case EnemyType.Wood:
-                enemyStatus = new EnemyStatus(enemyType, "Wood", 100, 2f);
+                enemyStatus = new EnemyStatus(enemyType, "Wood", 35, 1f);
                 break;
             case EnemyType.Kotatsu:
-                enemyStatus = new EnemyStatus(enemyType, "Kotatsu", 100, 3f);
+                enemyStatus = new EnemyStatus(enemyType, "Kotatsu", 100, 1.2f);
                 break;
             case EnemyType.Ball:
-                enemyStatus = new EnemyStatus(enemyType, "Ball", 100, 5f);
+                enemyStatus = new EnemyStatus(enemyType, "Ball", 150, 1f);
                 break;
             case EnemyType.CircusRing:
-                enemyStatus = new EnemyStatus(enemyType, "CircusRing", 100, 5f);
+                enemyStatus = new EnemyStatus(enemyType, "CircusRing", 150, 1.5f);
                 break;
             case EnemyType.MerryGoRound:
-                enemyStatus = new EnemyStatus(enemyType, "MerryGoRound", 100, 5f);
+                enemyStatus = new EnemyStatus(enemyType, "MerryGoRound", 200, 2f);
                 break;
             case EnemyType.Drill:
-                enemyStatus = new EnemyStatus(enemyType, "Drill", 100, 7f);
+                enemyStatus = new EnemyStatus(enemyType, "Drill", 300, 4f);
                 break;
         }
 
