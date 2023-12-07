@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/EnemyScripts/EnemyBoss.cs.meta
+guid: 4864ac0e1abe78d41a1c2416239f97e8
+========
+guid: 4f19a005ffb427042952a5372401ef7d
+>>>>>>>> origin/JJIN-MAK:Assets/Scripts/PlayerScripts/PlayerController.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

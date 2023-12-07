@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 793419f4d418a1445b46d1a3d6f69f73, type: 3}
+  m_Name: DamagePotion
+  m_EditorClassIdentifier: 
+  itemType: 1
+  name: DamagePotion
+  desc: "\uB370\uBBF8\uC9C0\uB97C \uC62C\uB824\uC90D\uB2C8\uB2E4."
+  icon: {fileID: 21300016, guid: ddf8838d0a06d8d4c9dec9e3bed69260, type: 3}
+  recover: 0
+  damages: 5
+  speed: 0
+  dropProbability: 30
+  itemPrefab: {fileID: 2876993957885134241, guid: b1b3be055bdd19d4a8fe13fd6fecb757, type: 3}

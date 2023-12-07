@@ -1,0 +1,131 @@
+{
+    "Datas":
+    [   
+   {
+        "type" : 0,
+        "name": "Machete",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "Weapon/Machete",    
+        "weaponSpriteAddress": "weaponSprite/dot_machete"
+
+    },
+    {
+        "type" : 1,
+        "name": "CRTTV",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "Weapon/CRTTV",     
+        "weaponSpriteAddress": "weaponSprite/dot_tv"     
+    },
+    {
+        "type" : 2,
+        "name": "Balloon",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "Weapon/Balloon",
+        "weaponSpriteAddress": "weaponSprite/dot_balloon"          
+    },
+    {
+        "type" : 3,
+        "name": "HandSaw",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "Weapon/HandSaw",
+        "weaponSpriteAddress": "weaponSprite/dot_saw"          
+    },
+
+
+    {
+        "type" : 4,
+        "name": "전기톱",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/Chainsaw",
+        "weaponSpriteAddress": "weaponSprite/Chainsaw"          
+    },
+    {
+        "type" : 5,
+        "name": "접힌종이",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/FoldedPaper",
+        "weaponSpriteAddress": "weaponSprite/FoldedPaper"          
+    },
+    {
+        "type" : 6,
+        "name": "유령의손",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/GhostHand",
+        "weaponSpriteAddress": "weaponSprite/GhostHand"          
+    },
+
+
+    {
+        "type" : 7,
+        "name": "광대의코인",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/GoldenCoins",
+        "weaponSpriteAddress": "weaponSprite/GoldenCoins"          
+    },
+    {
+        "type" : 8,
+        "name": "살인마의가면",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/MaskoftheKiller",
+        "weaponSpriteAddress": "weaponSprite/MaskoftheKiller"          
+    },
+    {
+        "type" : 9,
+        "name": "악령",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/Soul",
+        "weaponSpriteAddress": "weaponSprite/Soul"          
+    },
+
+
+    {
+        "type" : 10,
+        "name": "나뭇가지",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/Stick",
+        "weaponSpriteAddress": "weaponSprite/Stick"          
+    },
+    {
+        "type" : 11,
+        "name": "죽음의함정",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/TrapofDeath",
+        "weaponSpriteAddress": "weaponSprite/TrapofDeath"          
+    },
+    {
+        "type" : 12,
+        "name": "독특한퍼즐",
+        "damage": 5,
+        "attackSpeed": 10,
+        "speed": 10,
+        "weaponPrefabAddress": "NewWeapon/UniquePuzzle",
+        "weaponSpriteAddress": "weaponSprite/UniquePuzzle"          
+    }
+    
+]
+
+}

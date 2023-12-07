@@ -7,5 +7,26 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: 2636c973924d12b4e931f452b1d10b50
+  - enabled: 1
+    path: Assets/Scenes/StartScene.unity
+    guid: 7f2d4d493d945114ebf1882ad9916ee4
+  - enabled: 1
+    path: Assets/Scenes/CharacterChoiceScene.unity
+    guid: b67a51bb315eb4e46b93c27ff8a9a06c
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: fd47093e2edc8574fb1689f9e7ebb182
+  - enabled: 0
+    path: Assets/Scenes/ShopScene.unity
+    guid: 9a4ccc0d791f4504c8f3998b42f752eb
+  - enabled: 1
+    path: Assets/Scenes/DieScene.unity
+    guid: df0b3438a733f01439fbcb6b2958e6a8
+  - enabled: 1
+    path: Assets/Scenes/StageClear.unity
+    guid: ccfc616cd1120fd41a851e569da6adc5
+  - enabled: 1
+    path: Assets/Scenes/ExitScene.unity
+    guid: 25b31f847d50ad846a6ce54a1dd3244e
   m_configObjects: {}
