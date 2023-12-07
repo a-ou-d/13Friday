@@ -18,6 +18,6 @@ MonoBehaviour:
   icon: {fileID: 21300024, guid: ddf8838d0a06d8d4c9dec9e3bed69260, type: 3}
   recover: 0
   damages: 0
-  speed: 0
+  speed: 2
   dropProbability: 10
   itemPrefab: {fileID: 7762417259253994583, guid: df12f82d89c3a074e911502e67764cdc, type: 3}

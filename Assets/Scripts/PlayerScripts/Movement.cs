@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     private Controller _controller;
     private Shooting _shooting;
+    private GameManager gameManager;
 
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
@@ -20,6 +21,8 @@ public class Movement : MonoBehaviour
     void Start()
     {
         _controller.OnMoveEvent += Move;
+
+        gameManager = GameManager.Instance;
     }
 
     private void FixedUpdate()
@@ -36,7 +39,7 @@ public class Movement : MonoBehaviour
 
     private void ApplyMovement(Vector2 direction)
     {
-        direction = direction * 5;
+        direction = direction * (5 + gameManager.speed);
         _rigidbody.velocity = direction;
     }
 }

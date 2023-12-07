@@ -13,7 +13,7 @@ public class ItemData : ScriptableObject
 
     [Header("Option Data")]
     public int recover;
-    public float damages;
+    public int damages;
     public float speed;
     public float dropProbability;
 

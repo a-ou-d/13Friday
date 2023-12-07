@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public GameObject PennywisePrefab;
     public GameObject JigsawPrefab;
     [SerializeField]private int Life = 3;
+    public float speed;
+    public int IncreaseDamage;
 
     public GameObject EnemySpawn;
     public GameObject PauseMenu;
@@ -145,5 +147,25 @@ public class GameManager : MonoBehaviour
         // 게임 오버 시의 처리
         SceneManager.LoadScene("DieScene");
         Debug.Log("Game Over");
+    }
+
+    public void Heal(int amount)
+    {
+        //포션 먹으면 회복
+        Life += amount;
+        Debug.Log(Life);
+    }
+
+    public void SpeedUp(float amount)
+    {
+        //포션 먹으면 속도 증가
+        speed += amount;
+        Debug.Log(speed);
+    }
+    public void DamageUp(int amount)
+    {
+        //포션 먹으면 속도 증가
+        IncreaseDamage += amount;
+        Debug.Log(IncreaseDamage);
     }
 }

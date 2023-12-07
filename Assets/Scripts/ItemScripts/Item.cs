@@ -11,7 +11,7 @@ public class Item : MonoBehaviour
 
     private string _name;
     private int _recover;
-    private float _damages;
+    private int _damages;
     private float _speed;
     private float _dropProbability;
     private Sprite _icon;
@@ -68,12 +68,21 @@ public class Item : MonoBehaviour
 
     private void ApplyItemSpeedEffects()
     {
-        Debug.Log("스피드 업");
+        if (gameManager != null)
+        {
+            gameManager.SpeedUp(_speed);
+            Debug.Log("스피드 업");
+        }
+        
     }
 
     private void ApplyItemDamageEffects()
     {
-        Debug.Log("무기 데미지 강화!");
+        if (gameManager != null)
+        {
+            gameManager.DamageUp(_damages);
+            Debug.Log("공격증가!");
+        }
     }
 
     private void ApplyItemRecoverEffects()
@@ -81,8 +90,9 @@ public class Item : MonoBehaviour
         if (gameManager != null)
         {
             gameManager.Heal(_recover);
+            Debug.Log("체력회복!");
         }
-        Debug.Log("체력회복!");
+        
     }
 
 }

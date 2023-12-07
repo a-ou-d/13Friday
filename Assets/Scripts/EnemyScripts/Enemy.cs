@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    private GameManager gameManager;
     private EnemyStatus enemyStatus;
     private GameObject targetPlayer;
     private Vector3 targetPosition;
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         enemyStatus = new EnemyStatus();
+        gameManager = GameManager.Instance;
         enemyStatus = enemyStatus.SetStatus(enemyType);
         targetPlayer = GameObject.FindWithTag("Player");
         speed = enemyStatus._speed;
@@ -25,7 +27,7 @@ public class Enemy : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        hp -= damage;
+        hp -= damage + gameManager.IncreaseDamage;
     }
 
     private void Update()
