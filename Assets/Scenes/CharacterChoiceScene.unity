@@ -1882,6 +1882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80a9a611e47e624385f0f6670288b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kill: {fileID: 0}
   JasonPrefab: {fileID: 5987108871860618664, guid: 84c6ef4d5ed5f054f8473b7c9152c549, type: 3}
   SadakoPrefab: {fileID: 4226328214236220641, guid: 3a5f7ac176372174bb7f25a7fe991e9d, type: 3}
   PennywisePrefab: {fileID: 458201390686525031, guid: 5a80c156354e7da47a93bd88a97a983a, type: 3}
@@ -1890,8 +1891,6 @@ MonoBehaviour:
   EnemySpawn: {fileID: 7901755907796988323, guid: 7dc0b7c96bbda6f41b86df968ff615fc, type: 3}
   PauseMenu: {fileID: 0}
   SettingMenu: {fileID: 0}
-  timeText: {fileID: 0}
-  scoreText: {fileID: 0}
 --- !u!4 &906874842
 Transform:
   m_ObjectHideFlags: 0
