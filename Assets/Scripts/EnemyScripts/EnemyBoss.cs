@@ -23,6 +23,7 @@ public class EnemyBoss : MonoBehaviour
 
     private void Start()
     {
+        stageManager = new StageManager();
         enemyBossStatus = new EnemyBossStatus();
         enemyBossStatus = enemyBossStatus.SetStatus(enemyBossType);
         targetPlayer = GameObject.FindWithTag("Player");

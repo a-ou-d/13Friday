@@ -53,7 +53,7 @@ public class EnemyStatus
                 enemyStatus = new EnemyStatus(enemyType, "MerryGoRound", 200, 2f);
                 break;
             case EnemyType.Drill:
-                enemyStatus = new EnemyStatus(enemyType, "Drill", 300, 4f);
+                enemyStatus = new EnemyStatus(enemyType, "Drill", 100, 4f);
                 break;
         }
 
@@ -126,7 +126,7 @@ public class EnemyBossStatus
         switch (enemyBossType)
         {
             case EnemyBossType.Boss1:
-                enemyBossStatus = new EnemyBossStatus(enemyBossType, "Boss1", 5, 6f, 5f);
+                enemyBossStatus = new EnemyBossStatus(enemyBossType, "Boss1", 500, 6f, 5f);
                 break;
         }
 
