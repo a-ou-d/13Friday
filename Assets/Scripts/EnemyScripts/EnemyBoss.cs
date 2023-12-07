@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class EnemyBoss : MonoBehaviour
 {
+    private StageManager stageManager;
     private EnemyBossStatus enemyBossStatus;
     private GameObject targetPlayer;
     private Vector3 targetPosition;
     private Vector3 dir;
+
 
     [SerializeField] private float keepDistance;
     [SerializeField] private float speed;
@@ -21,6 +23,7 @@ public class EnemyBoss : MonoBehaviour
 
     private void Start()
     {
+        stageManager = new StageManager();
         enemyBossStatus = new EnemyBossStatus();
         enemyBossStatus = enemyBossStatus.SetStatus(enemyBossType);
         targetPlayer = GameObject.FindWithTag("Player");
@@ -32,6 +35,15 @@ public class EnemyBoss : MonoBehaviour
     public void TakeDamage(int damage)
     {
         hp -= damage;
+
+        if (hp <= 0)
+        {
+            GameManager.ObjectDestroyed();
+            Destroy(gameObject);
+
+            stageManager.ClearStage();
+        }
+
     }
 
     private void Update()
@@ -45,16 +57,4 @@ public class EnemyBoss : MonoBehaviour
             transform.position += dir * speed * Time.deltaTime;
         }
     }
-
-    public bool Isdie()
-    {
-        if (hp <= 0)
-        {
-            GameManager.ObjectDestroyed();
-            Destroy(gameObject);
-            return true;
-        }
-        return false;
-    }
-
 }

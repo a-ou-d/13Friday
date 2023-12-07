@@ -27,14 +27,6 @@ public class StageManager : MonoBehaviour // 스테이지 관리 + 캐릭터,스테이지 잠�
         }
     }
 
-    private void Update() // 보스 죽으면 스테이지 클리어
-    {
-        if (boss != null && boss.Isdie())
-        {
-            ClearStage();
-        }
-    }
-
     public void ClearStage()
     {
         currentStage++; // 현재 스테이지 증가
