@@ -152,16 +152,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80a9a611e47e624385f0f6670288b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kill: {fileID: 0}
   JasonPrefab: {fileID: 0}
   SadakoPrefab: {fileID: 0}
   PennywisePrefab: {fileID: 0}
-  SawPrefab: {fileID: 0}
+  JigsawPrefab: {fileID: 0}
   Life: 3
   EnemySpawn: {fileID: 0}
   PauseMenu: {fileID: 0}
   SettingMenu: {fileID: 0}
-  timeText: {fileID: 0}
-  scoreText: {fileID: 0}
 --- !u!4 &54083554
 Transform:
   m_ObjectHideFlags: 0
@@ -884,9 +883,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2055888974}
-        m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 2055888979}
+        m_TargetAssemblyTypeName: TMP_StartBtn, Assembly-CSharp
+        m_MethodName: CharacterChoiceSceneLoad
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -947,8 +946,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2055888974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c00b9fda396445e46843477b65367e34, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c0690f4515bb474b9ee22449c652add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 0}
-  stages: []
