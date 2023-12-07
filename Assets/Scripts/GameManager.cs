@@ -121,15 +121,13 @@ public class GameManager : MonoBehaviour
     void TogglePause()
     {
         isPaused = !isPaused;
-        PauseMenu.SetActive(isPaused);
-        Time.timeScale = isPaused ? 0f : 1f;
+        PauseMenu.SetActive(isPaused);        
     }
 
     void ToggleSetting()
     {
         isPaused = !isPaused;
-        SettingMenu.SetActive(isPaused);
-        Time.timeScale = isPaused ? 0f : 1f;
+        SettingMenu.SetActive(isPaused);        
     }
 
     void ResumeGame()
@@ -137,7 +135,6 @@ public class GameManager : MonoBehaviour
         PauseMenu.SetActive(false);
         SettingMenu.SetActive(false);
         isPaused = false;
-        Time.timeScale = 1f;
     }
 
     private void GameOver()
