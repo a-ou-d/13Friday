@@ -41,6 +41,11 @@ public class WeaponData : MonoBehaviour
             EnemyBoss boss = collision.gameObject.GetComponent<EnemyBoss>();
             boss.TakeDamage(damage);
         }
+        else if (collision.gameObject.tag == "Survivor")
+        {
+            GoldenDooki goldenDooki = collision.gameObject.GetComponent<GoldenDooki>();
+            goldenDooki.TakeDamage(damage);
+        }
         Destroy(gameObject);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class EnemyBoss : MonoBehaviour
 {
+    private GameManager gameManager;
     private StageManager stageManager;
     private EnemyBossStatus enemyBossStatus;
     private GameObject targetPlayer;
@@ -23,6 +24,7 @@ public class EnemyBoss : MonoBehaviour
 
     private void Start()
     {
+        gameManager = GameManager.Instance;
         stageManager = new StageManager();
         enemyBossStatus = new EnemyBossStatus();
         enemyBossStatus = enemyBossStatus.SetStatus(enemyBossType);
@@ -34,7 +36,7 @@ public class EnemyBoss : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        hp -= damage;
+        hp -= damage + gameManager.IncreaseDamage; 
 
         if (hp <= 0)
         {

@@ -4,17 +4,19 @@ using UnityEngine.InputSystem.Processors;
 public class GoldenDooki : MonoBehaviour
 {
     private ItemDrop itemDrop;
+    private GameManager gameManager;
     private Transform playerTransform;
     private float detectionRange = 15.0f; // 플레이어 탐지 범위
     private float fleeRange = 10.0f; // 도망치는 범위
     private Vector2 originalPosition; // 몬스터 초기 위치
     private float speed = 3.0f;
-    private int Hp = 30;
+    private int hp = 10;
 
     private bool hasDroppedItem = false;
 
     private void Start()
     {
+        gameManager = GameManager.Instance;
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform; // 플레이어 찾기
         originalPosition = (Vector2)transform.position; // 몬스터의 초기 위치 저장
         itemDrop = GetComponent<ItemDrop>();
@@ -47,23 +49,16 @@ public class GoldenDooki : MonoBehaviour
             }
         }
     }
+    public void TakeDamage(int damage)
+    {
+        hp -= damage + gameManager.IncreaseDamage;
+    }
     private void IsDead()
     {
-        if (Hp <= 0)
+        if (hp <= 0)
         {
-            Debug.Log("두키쥬금 ㅠㅠ");
             GameManager.ObjectDestroyed();
             Destroy(gameObject);
-            OnDestroy();
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            Debug.Log("두키잡음");
-            Destroy(gameObject);
-            OnDestroy();
         }
     }
 

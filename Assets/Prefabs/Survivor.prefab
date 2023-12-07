@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1587726353953629348}
   - component: {fileID: -1912080086256601987}
-  - component: {fileID: -3718805741097846003}
   - component: {fileID: -8242761018356075252}
-  - component: {fileID: 1920811283383492209}
+  - component: {fileID: -3848194199753423026}
   m_Layer: 0
   m_Name: Survivor
   m_TagString: Survivor
@@ -53,33 +52,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b010c4d26d0837544bb75c3770d3e796, type: 2}
   - {fileID: 11400000, guid: 08300c26073a8684f8fef88615d896cd, type: 2}
   - {fileID: 11400000, guid: dab305103b2a1764a9c232dcbeaa5df2, type: 2}
---- !u!50 &-3718805741097846003
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1195484275389007257}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &-8242761018356075252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,8 +64,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee16e8c693f91ea4488cfe58cf6c6fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!70 &1920811283383492209
-CapsuleCollider2D:
+--- !u!58 &-3848194199753423026
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -125,8 +97,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.55, y: 1.45}
-  m_Direction: 0
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &4961445696673507608
 GameObject:
   m_ObjectHideFlags: 0
