@@ -41,7 +41,7 @@ public class EnemyStatus
                 enemyStatus = new EnemyStatus(enemyType, "Wood", 35, 1f);
                 break;
             case EnemyType.Kotatsu:
-                enemyStatus = new EnemyStatus(enemyType, "Kotatsu", 100, 1.2f);
+                enemyStatus = new EnemyStatus(enemyType, "Kotatsu", 50, 1.2f);
                 break;
             case EnemyType.Ball:
                 enemyStatus = new EnemyStatus(enemyType, "Ball", 150, 1f);

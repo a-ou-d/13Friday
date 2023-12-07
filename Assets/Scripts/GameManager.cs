@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         //PlayerController sadakoController = sadako.GetComponent<PlayerController>();
         //ICharacterSkills sadakoSkills = sadako.GetComponent<Sadako>();
         //sadakoController.SetCharacterSkills(sadakoSkills);
-        
+
         //패니와이저 게임매니저에서 생성 및 스킬 입력
         //GameObject pennywise = Instantiate(PennywisePrefab, Vector3.zero, Quaternion.identity);
         //PlayerController pennywiseController = pennywise.GetComponent<PlayerController>();
@@ -38,16 +38,16 @@ public class GameManager : MonoBehaviour
         //pennywiseController.SetCharacterSkills(pennywiseSkills);
 
         //제이슨 게임매니저에서 생성 및 스킬 입력
-        //GameObject jason = Instantiate(JasonPrefab, Vector3.zero, Quaternion.identity);
-        //PlayerController jasonController = jason.GetComponent<PlayerController>();
-        //ICharacterSkills jasonSkills = jason.GetComponent<Jason>();
-        //jasonController.SetCharacterSkills(jasonSkills);
+        GameObject jason = Instantiate(JasonPrefab, Vector3.zero, Quaternion.identity);
+        PlayerController jasonController = jason.GetComponent<PlayerController>();
+        ICharacterSkills jasonSkills = jason.GetComponent<Jason>();
+        jasonController.SetCharacterSkills(jasonSkills);
 
         //쏘우 게임매니저에서 생성 및 스킬 입력
-        GameObject Jigsaw = Instantiate(JigsawPrefab, Vector3.zero, Quaternion.identity);
-        PlayerController sawController = Jigsaw.GetComponent<PlayerController>();
-        ICharacterSkills sawSkills = Jigsaw.GetComponent<Jigsaw>();
-        sawController.SetCharacterSkills(sawSkills);
+        //GameObject Jigsaw = Instantiate(JigsawPrefab, Vector3.zero, Quaternion.identity);
+        //PlayerController sawController = Jigsaw.GetComponent<PlayerController>();
+        //ICharacterSkills sawSkills = Jigsaw.GetComponent<Jigsaw>();
+        //sawController.SetCharacterSkills(sawSkills);
 
         GameObject enemySpawn = Instantiate(EnemySpawn, Vector3.zero, Quaternion.identity);
 
