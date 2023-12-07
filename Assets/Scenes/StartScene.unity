@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 42224373}
   - component: {fileID: 42224372}
   - component: {fileID: 42224371}
+  - component: {fileID: 42224374}
   m_Layer: 5
   m_Name: ContinueBtn
   m_TagString: Untagged
@@ -206,7 +207,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 42224374}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: OnContinueButtonClicked
         m_Mode: 1
@@ -260,6 +261,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42224369}
   m_CullTransparentMesh: 1
+--- !u!114 &42224374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42224369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80a9a611e47e624385f0f6670288b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kill: {fileID: 0}
+  JasonPrefab: {fileID: 0}
+  SadakoPrefab: {fileID: 0}
+  PennywisePrefab: {fileID: 0}
+  JigsawPrefab: {fileID: 0}
+  Life: 3
+  speed: 0
+  IncreaseDamage: 0
+  EnemySpawn: {fileID: 0}
+  PauseMenu: {fileID: 704854743}
+  SettingMenu: {fileID: 593718819}
 --- !u!1 &86033092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1716,6 +1740,7 @@ GameObject:
   - component: {fileID: 935222603}
   - component: {fileID: 935222602}
   - component: {fileID: 935222601}
+  - component: {fileID: 935222605}
   m_Layer: 5
   m_Name: SettingBtn
   m_TagString: Untagged
@@ -1767,7 +1792,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 935222605}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: OnSettingButtonClicked
         m_Mode: 1
@@ -1837,6 +1862,29 @@ RectTransform:
   m_AnchoredPosition: {x: 825.8064, y: -479.5849}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &935222605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935222600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80a9a611e47e624385f0f6670288b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kill: {fileID: 0}
+  JasonPrefab: {fileID: 0}
+  SadakoPrefab: {fileID: 0}
+  PennywisePrefab: {fileID: 0}
+  JigsawPrefab: {fileID: 0}
+  Life: 3
+  speed: 0
+  IncreaseDamage: 0
+  EnemySpawn: {fileID: 0}
+  PauseMenu: {fileID: 704854743}
+  SettingMenu: {fileID: 593718819}
 --- !u!1 &983562979
 GameObject:
   m_ObjectHideFlags: 0
